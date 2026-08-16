@@ -1,0 +1,26 @@
+
+<<<PAGE 1>>>
+
+ Gap 1: Static Utility + Group-Blind Fairness 
+ The paper's utility formula only uses distance: Utility =  Geo(dropoff,pickup) − 
+ Geo(pickup,driver_location)  . It explicitly states  this stays the  same regardless of time  — so a 5km 
+ trip at 2 PM and a 5km trip at peak 6 PM traffic are valued identically. Real traffic/time cost is 
+ ignored. 
+ Also, their fairness metric Var(driver earnings) treats all drivers equally regardless of hours 
+ worked. 
+ Example: If Driver A drives 60 hrs/week and earns ₹ 6000, and Driver B (part-timer) drives only 
+ 15 hrs/week and also earns ₹ 6000 — the paper calls this "perfectly fair" (variance = 0). But 
+ Driver A's real rate is ₹ 100/hr while Driver B's is ₹ 400/hr. That's a hidden 4x gap the paper's 
+ metric can't see. 
+ Proposed fix: Make utility time/traffic-aware (reuse their existing demand-prediction module for 
+ this), and split drivers into activity groups (full-time/part-time), then compare fairness within and 
+ between these groups  using hourly rate  , not raw totals. 
+ Gap 2: Utilization/Access Fairness 
+ The paper only checks final earnings, never checks if an available driver was actually given 
+ work. 
+ Example: Driver X is online 8 hrs but assigned only 2 trips (idle 75% of time). Driver Y is online 
+ 8 hrs and assigned 10 trips. If X's 2 trips happen to be high-value, both can end up with equal 
+ total earnings — paper says "fair." But X wasted 6 hours waiting with no assignment — that's a 
+ real inequality the paper never measures. 
+ Proposed fix: New metric — Utilization = assigned time-slots / online time-slots per driver, and 
+ check its variance across drivers/groups. 

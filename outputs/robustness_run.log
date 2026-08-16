@@ -1,0 +1,1076 @@
+15:40:17 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+15:40:17 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+15:40:17 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+15:40:17 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+15:40:18 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+15:40:18 | INFO    | ltf                | calibrated sample rate 0.00424: 63120 online slots x target 0.60 / 4 slots per job = 9468 jobs, from 2231191 available requests
+15:40:19 | INFO    | ltf                | requests: 9467 over 2016 slots (rate 0.0042), 4.7 per slot, 1352 per day
+15:40:20 | INFO    | ltf                | requests: 6604 over 2016 slots (rate 0.0030), 3.3 per slot, 943 per day
+15:40:20 | INFO    | ltf                |   calibration step 1: rate 0.002959 -> offered load 0.602 (target 0.60)
+15:40:20 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,604 (rate 0.00296), 3.3 per slot, offered load 0.602
+nodes: 87, utility mode 'time_aware' in distance units
+15:40:20 | INFO    | ltf                | warmup (efficiency only): total utility 12,167.5, 4,927/6,492 requests served (75.9%), mean utilisation 0.315
+15:40:20 | INFO    | ltf                | calibrated omegas: total=1.644 rate=1111 util=5.959e+04
+15:40:20 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+15:40:20 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+15:40:20 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+15:40:20 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+15:40:21 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+15:40:22 | INFO    | ltf                | requests: 6872 over 2016 slots (rate 0.0030), 3.4 per slot, 982 per day
+15:40:22 | INFO    | ltf                | sample rate pinned at 0.00296, measured offered load 0.626
+15:40:22 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,872 (rate 0.00296), 3.4 per slot, offered load 0.626
+nodes: 87, utility mode 'time_aware' in distance units
+15:40:22 | INFO    | ltf                | forecaster ...
+15:40:23 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+15:40:23 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+15:40:25 | INFO    | ltf                | training forecaster on mps ...
+15:42:17 | INFO    | ltf                | training forecaster on mps done in 111.7s
+15:42:19 | INFO    | ltf                | forecaster test: demand MSE 0.1378 (log space), 6.46 (counts); seasonal-naive 8.86 -> 27.1% better
+15:42:19 | INFO    | ltf                | forecaster test: congestion MSE 0.01198, MAE 0.0826 (on directly-measured cells)
+15:42:19 | INFO    | ltf                | forecaster done in 117.1s
+15:42:21 | INFO    | ltf                | synthetic (predicted) requests: 6346 over 2016 slots
+15:42:21 | INFO    | ltf                | training Kang et al. (totals) [distance] (30 episodes over 2 scenario(s)) ...
+15:42:22 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,837.9, 6,501/6,766 requests served (96.1%), mean utilisation 0.493
+15:42:22 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 1,826.3, 6,070/6,235 requests served (97.4%), mean utilisation 0.457
+15:42:23 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,995.5, 6,497/6,766 requests served (96.0%), mean utilisation 0.492
+15:42:25 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 1,959.6, 6,059/6,235 requests served (97.2%), mean utilisation 0.454
+15:42:25 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,794.5, 6,515/6,766 requests served (96.3%), mean utilisation 0.495
+15:42:26 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,169.1, 6,067/6,235 requests served (97.3%), mean utilisation 0.453
+15:42:27 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,177.9, 6,519/6,766 requests served (96.3%), mean utilisation 0.492
+15:42:28 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,342.7, 6,069/6,235 requests served (97.3%), mean utilisation 0.451
+15:42:29 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,397.1, 6,514/6,766 requests served (96.3%), mean utilisation 0.488
+15:42:30 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,618.8, 6,052/6,235 requests served (97.1%), mean utilisation 0.447
+15:42:30 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,731.6, 6,518/6,766 requests served (96.3%), mean utilisation 0.486
+15:42:31 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,574.4, 6,067/6,235 requests served (97.3%), mean utilisation 0.449
+15:42:32 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,954.2, 6,493/6,766 requests served (96.0%), mean utilisation 0.482
+15:42:33 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,969.7, 6,057/6,235 requests served (97.1%), mean utilisation 0.444
+15:42:34 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,080.3, 6,503/6,766 requests served (96.1%), mean utilisation 0.482
+15:42:35 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,952.6, 6,063/6,235 requests served (97.2%), mean utilisation 0.444
+15:42:36 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,253.3, 6,503/6,766 requests served (96.1%), mean utilisation 0.480
+15:42:37 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 2,982.1, 6,072/6,235 requests served (97.4%), mean utilisation 0.444
+15:42:38 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,324.4, 6,500/6,766 requests served (96.1%), mean utilisation 0.478
+15:42:39 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,446.5, 6,064/6,235 requests served (97.3%), mean utilisation 0.439
+15:42:39 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7770.9, |V|>0 on 28429/104400 states
+15:42:40 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,503.1, 6,517/6,766 requests served (96.3%), mean utilisation 0.478
+15:42:41 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,507.3, 6,069/6,235 requests served (97.3%), mean utilisation 0.439
+15:42:42 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,866.1, 6,512/6,766 requests served (96.2%), mean utilisation 0.475
+15:42:43 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 3,578.1, 6,080/6,235 requests served (97.5%), mean utilisation 0.438
+15:42:45 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,186.9, 6,529/6,766 requests served (96.5%), mean utilisation 0.472
+15:42:46 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,000.4, 6,078/6,235 requests served (97.5%), mean utilisation 0.435
+15:42:47 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,076.4, 6,494/6,766 requests served (96.0%), mean utilisation 0.469
+15:42:48 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,059.1, 6,068/6,235 requests served (97.3%), mean utilisation 0.433
+15:42:49 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,346.1, 6,501/6,766 requests served (96.1%), mean utilisation 0.469
+15:42:50 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,379.8, 6,084/6,235 requests served (97.6%), mean utilisation 0.432
+15:42:50 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,361.8, 6,505/6,766 requests served (96.1%), mean utilisation 0.468
+15:42:51 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,494.7, 6,074/6,235 requests served (97.4%), mean utilisation 0.429
+15:42:52 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,590.3, 6,506/6,766 requests served (96.2%), mean utilisation 0.466
+15:42:53 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,552.6, 6,070/6,235 requests served (97.4%), mean utilisation 0.428
+15:42:54 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,815.0, 6,512/6,766 requests served (96.2%), mean utilisation 0.464
+15:42:55 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,749.8, 6,076/6,235 requests served (97.4%), mean utilisation 0.426
+15:42:56 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,101.7, 6,499/6,766 requests served (96.1%), mean utilisation 0.461
+15:42:56 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 4,913.1, 6,088/6,235 requests served (97.6%), mean utilisation 0.424
+15:42:57 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,128.0, 6,517/6,766 requests served (96.3%), mean utilisation 0.460
+15:42:58 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,245.2, 6,081/6,235 requests served (97.5%), mean utilisation 0.421
+15:42:58 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11373.3, |V|>0 on 35500/104400 states
+15:42:59 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,503.5, 6,543/6,766 requests served (96.7%), mean utilisation 0.459
+15:42:59 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,350.1, 6,068/6,235 requests served (97.3%), mean utilisation 0.419
+15:43:00 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,553.9, 6,515/6,766 requests served (96.3%), mean utilisation 0.457
+15:43:01 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,398.2, 6,086/6,235 requests served (97.6%), mean utilisation 0.420
+15:43:02 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,697.9, 6,545/6,766 requests served (96.7%), mean utilisation 0.457
+15:43:03 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,691.7, 6,092/6,235 requests served (97.7%), mean utilisation 0.417
+15:43:03 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,854.9, 6,503/6,766 requests served (96.1%), mean utilisation 0.453
+15:43:04 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,055.3, 6,096/6,235 requests served (97.8%), mean utilisation 0.414
+15:43:04 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 7,025.8, 6,494/6,766 requests served (96.0%), mean utilisation 0.450
+15:43:05 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 5,887.5, 6,076/6,235 requests served (97.4%), mean utilisation 0.414
+15:43:05 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 7,380.6, 6,509/6,766 requests served (96.2%), mean utilisation 0.449
+15:43:06 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,152.3, 6,077/6,235 requests served (97.5%), mean utilisation 0.412
+15:43:07 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 7,463.9, 6,484/6,766 requests served (95.8%), mean utilisation 0.444
+15:43:07 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,218.3, 6,069/6,235 requests served (97.3%), mean utilisation 0.410
+15:43:08 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 7,666.7, 6,497/6,766 requests served (96.0%), mean utilisation 0.444
+15:43:09 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,707.7, 6,085/6,235 requests served (97.6%), mean utilisation 0.406
+15:43:10 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 7,802.2, 6,515/6,766 requests served (96.3%), mean utilisation 0.444
+15:43:10 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,636.2, 6,095/6,235 requests served (97.8%), mean utilisation 0.408
+15:43:11 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 8,038.6, 6,525/6,766 requests served (96.4%), mean utilisation 0.442
+15:43:12 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 6,937.1, 6,109/6,235 requests served (98.0%), mean utilisation 0.405
+15:43:12 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14975.8, |V|>0 on 39490/104400 states
+15:43:12 | INFO    | ltf                | training Kang et al. (totals) [distance] (30 episodes over 2 scenario(s)) done in 51.0s
+15:43:12 | INFO    | ltf                | Kang et al. (totals) [distance]: total utility 11,036.0, 4,967/6,492 requests served (76.5%), mean utilisation 0.328
+15:43:12 | INFO    | ltf                | training Ours (Gap 1+2) [distance] (30 episodes over 2 scenario(s)) ...
+15:43:13 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,676.9, 6,491/6,766 requests served (95.9%), mean utilisation 0.494
+15:43:16 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 1,875.2, 6,078/6,235 requests served (97.5%), mean utilisation 0.456
+15:43:17 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,054.9, 6,529/6,766 requests served (96.5%), mean utilisation 0.494
+15:43:18 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,073.4, 6,053/6,235 requests served (97.1%), mean utilisation 0.454
+15:43:20 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,957.0, 6,502/6,766 requests served (96.1%), mean utilisation 0.493
+15:43:21 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,137.4, 6,061/6,235 requests served (97.2%), mean utilisation 0.453
+15:43:22 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,316.5, 6,511/6,766 requests served (96.2%), mean utilisation 0.490
+15:43:23 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,339.8, 6,074/6,235 requests served (97.4%), mean utilisation 0.452
+15:43:24 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,218.2, 6,510/6,766 requests served (96.2%), mean utilisation 0.490
+15:43:25 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,488.7, 6,072/6,235 requests served (97.4%), mean utilisation 0.450
+15:43:26 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,519.2, 6,510/6,766 requests served (96.2%), mean utilisation 0.488
+15:43:27 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,493.3, 6,063/6,235 requests served (97.2%), mean utilisation 0.448
+15:43:28 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,876.4, 6,518/6,766 requests served (96.3%), mean utilisation 0.486
+15:43:29 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 2,816.1, 6,074/6,235 requests served (97.4%), mean utilisation 0.447
+15:43:30 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,993.5, 6,511/6,766 requests served (96.2%), mean utilisation 0.481
+15:43:31 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,023.8, 6,063/6,235 requests served (97.2%), mean utilisation 0.444
+15:43:32 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,249.0, 6,511/6,766 requests served (96.2%), mean utilisation 0.482
+15:43:32 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,205.5, 6,080/6,235 requests served (97.5%), mean utilisation 0.442
+15:43:34 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,195.4, 6,510/6,766 requests served (96.2%), mean utilisation 0.482
+15:43:35 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,294.1, 6,083/6,235 requests served (97.6%), mean utilisation 0.442
+15:43:35 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7489.5, |V|>0 on 27547/104400 states
+15:43:36 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,485.9, 6,515/6,766 requests served (96.3%), mean utilisation 0.478
+15:43:37 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,430.8, 6,070/6,235 requests served (97.4%), mean utilisation 0.440
+15:43:38 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,682.9, 6,497/6,766 requests served (96.0%), mean utilisation 0.475
+15:43:39 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,594.0, 6,091/6,235 requests served (97.7%), mean utilisation 0.439
+15:43:40 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,845.9, 6,498/6,766 requests served (96.0%), mean utilisation 0.474
+15:43:41 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,728.0, 6,074/6,235 requests served (97.4%), mean utilisation 0.437
+15:43:42 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,092.2, 6,529/6,766 requests served (96.5%), mean utilisation 0.473
+15:43:42 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 3,838.9, 6,072/6,235 requests served (97.4%), mean utilisation 0.435
+15:43:43 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,211.1, 6,508/6,766 requests served (96.2%), mean utilisation 0.470
+15:43:44 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,389.6, 6,081/6,235 requests served (97.5%), mean utilisation 0.430
+15:43:45 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,361.2, 6,517/6,766 requests served (96.3%), mean utilisation 0.469
+15:43:46 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,368.1, 6,067/6,235 requests served (97.3%), mean utilisation 0.431
+15:43:47 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,637.6, 6,516/6,766 requests served (96.3%), mean utilisation 0.466
+15:43:48 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,625.5, 6,089/6,235 requests served (97.7%), mean utilisation 0.429
+15:43:49 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,600.2, 6,530/6,766 requests served (96.5%), mean utilisation 0.469
+15:43:50 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,709.9, 6,073/6,235 requests served (97.4%), mean utilisation 0.426
+15:43:51 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,915.8, 6,501/6,766 requests served (96.1%), mean utilisation 0.462
+15:43:52 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,780.1, 6,074/6,235 requests served (97.4%), mean utilisation 0.425
+15:43:53 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,145.0, 6,500/6,766 requests served (96.1%), mean utilisation 0.460
+15:43:53 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 4,925.4, 6,059/6,235 requests served (97.2%), mean utilisation 0.423
+15:43:53 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11070.4, |V|>0 on 34715/104400 states
+15:43:54 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,371.8, 6,518/6,766 requests served (96.3%), mean utilisation 0.460
+15:43:55 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,026.7, 6,082/6,235 requests served (97.5%), mean utilisation 0.423
+15:43:56 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,575.8, 6,517/6,766 requests served (96.3%), mean utilisation 0.456
+15:43:57 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,313.4, 6,096/6,235 requests served (97.8%), mean utilisation 0.422
+15:43:58 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,699.2, 6,526/6,766 requests served (96.5%), mean utilisation 0.457
+15:43:59 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,574.5, 6,088/6,235 requests served (97.6%), mean utilisation 0.418
+15:44:00 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,700.8, 6,529/6,766 requests served (96.5%), mean utilisation 0.457
+15:44:01 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,750.1, 6,078/6,235 requests served (97.5%), mean utilisation 0.416
+15:44:02 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 7,030.8, 6,511/6,766 requests served (96.2%), mean utilisation 0.451
+15:44:03 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,821.0, 6,087/6,235 requests served (97.6%), mean utilisation 0.415
+15:44:04 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 7,221.8, 6,537/6,766 requests served (96.6%), mean utilisation 0.451
+15:44:05 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 5,923.2, 6,083/6,235 requests served (97.6%), mean utilisation 0.414
+15:44:06 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 7,344.6, 6,505/6,766 requests served (96.1%), mean utilisation 0.447
+15:44:07 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,126.0, 6,076/6,235 requests served (97.4%), mean utilisation 0.412
+15:44:08 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 7,474.9, 6,539/6,766 requests served (96.6%), mean utilisation 0.448
+15:44:09 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,336.7, 6,098/6,235 requests served (97.8%), mean utilisation 0.410
+15:44:10 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 7,647.6, 6,526/6,766 requests served (96.5%), mean utilisation 0.445
+15:44:11 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,513.4, 6,069/6,235 requests served (97.3%), mean utilisation 0.407
+15:44:12 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 7,751.3, 6,525/6,766 requests served (96.4%), mean utilisation 0.445
+15:44:13 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 6,896.0, 6,105/6,235 requests served (97.9%), mean utilisation 0.405
+15:44:13 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14647.2, |V|>0 on 38825/104400 states
+15:44:13 | INFO    | ltf                | training Ours (Gap 1+2) [distance] (30 episodes over 2 scenario(s)) done in 60.9s
+15:44:15 | INFO    | ltf                | Ours (Gap 1+2) [distance]: total utility 10,864.5, 4,805/6,492 requests served (74.0%), mean utilisation 0.320
+
+====================================================================================================
+1. DISTANCE-DENOMINATED UTILITY (reference)
+====================================================================================================
+                         method  variant  total_utility  fairness_total_var  rate_var  rate_var_between  rate_full_time  rate_part_time  rate_group_ratio  util_var  util_adj_var  n_idle_drivers  service_rate
+Kang et al. (totals) [distance] distance   11035.992601          555.125420  1.637315          0.494167        1.673787        3.122056          1.865264  0.014784      0.304642               1      0.765096
+      Ours (Gap 1+2) [distance] distance   10864.535951         1548.146045  0.375404          0.001054        2.073381        2.006505          0.967746  0.006664      0.111332               0      0.740142
+15:44:15 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+15:44:15 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+15:44:15 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+15:44:15 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+15:44:18 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+15:44:18 | INFO    | ltf                | calibrated sample rate 0.00424: 63120 online slots x target 0.60 / 4 slots per job = 9468 jobs, from 2231191 available requests
+15:44:19 | INFO    | ltf                | requests: 9467 over 2016 slots (rate 0.0042), 4.7 per slot, 1352 per day
+15:44:20 | INFO    | ltf                | requests: 6604 over 2016 slots (rate 0.0030), 3.3 per slot, 943 per day
+15:44:20 | INFO    | ltf                |   calibration step 1: rate 0.002959 -> offered load 0.602 (target 0.60)
+15:44:20 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,604 (rate 0.00296), 3.3 per slot, offered load 0.602
+nodes: 87, utility mode 'time_aware' in money units
+15:44:21 | INFO    | ltf                | warmup (efficiency only): total utility 48,112.5, 4,927/6,492 requests served (75.9%), mean utilisation 0.315
+15:44:21 | INFO    | ltf                | calibrated omegas: total=0.4157 rate=281 util=2.356e+05
+15:44:21 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+15:44:21 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+15:44:21 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+15:44:21 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+15:44:21 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+15:44:22 | INFO    | ltf                | requests: 6872 over 2016 slots (rate 0.0030), 3.4 per slot, 982 per day
+15:44:22 | INFO    | ltf                | sample rate pinned at 0.00296, measured offered load 0.626
+15:44:22 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,872 (rate 0.00296), 3.4 per slot, offered load 0.626
+nodes: 87, utility mode 'time_aware' in money units
+15:44:22 | INFO    | ltf                | forecaster ...
+15:44:23 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+15:44:23 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+15:44:25 | INFO    | ltf                | training forecaster on mps ...
+15:47:30 | INFO    | ltf                | training forecaster on mps done in 184.8s
+15:47:33 | INFO    | ltf                | forecaster test: demand MSE 0.1378 (log space), 6.46 (counts); seasonal-naive 8.86 -> 27.1% better
+15:47:33 | INFO    | ltf                | forecaster test: congestion MSE 0.01198, MAE 0.0826 (on directly-measured cells)
+15:47:34 | INFO    | ltf                | forecaster done in 191.1s
+15:47:36 | INFO    | ltf                | synthetic (predicted) requests: 6346 over 2016 slots
+15:47:36 | INFO    | ltf                | training Kang et al. (totals) [money] (30 episodes over 2 scenario(s)) ...
+15:47:37 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 11,221.5, 6,501/6,766 requests served (96.1%), mean utilisation 0.493
+15:47:38 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 7,221.6, 6,070/6,235 requests served (97.4%), mean utilisation 0.457
+15:47:39 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 11,844.7, 6,497/6,766 requests served (96.0%), mean utilisation 0.492
+15:47:40 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 7,748.7, 6,059/6,235 requests served (97.2%), mean utilisation 0.454
+15:47:41 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 11,049.9, 6,515/6,766 requests served (96.3%), mean utilisation 0.495
+15:47:42 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 8,576.9, 6,067/6,235 requests served (97.3%), mean utilisation 0.453
+15:47:43 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 12,566.0, 6,519/6,766 requests served (96.3%), mean utilisation 0.492
+15:47:44 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 9,263.4, 6,069/6,235 requests served (97.3%), mean utilisation 0.451
+15:47:45 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 13,432.8, 6,514/6,766 requests served (96.3%), mean utilisation 0.488
+15:47:46 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 10,355.3, 6,052/6,235 requests served (97.1%), mean utilisation 0.447
+15:47:47 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 14,755.5, 6,518/6,766 requests served (96.3%), mean utilisation 0.486
+15:47:48 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 10,179.5, 6,067/6,235 requests served (97.3%), mean utilisation 0.449
+15:47:49 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 15,635.8, 6,493/6,766 requests served (96.0%), mean utilisation 0.482
+15:47:50 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 11,742.7, 6,057/6,235 requests served (97.1%), mean utilisation 0.444
+15:47:51 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 16,134.3, 6,503/6,766 requests served (96.1%), mean utilisation 0.482
+15:47:52 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 11,675.1, 6,063/6,235 requests served (97.2%), mean utilisation 0.444
+15:47:53 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 16,818.2, 6,503/6,766 requests served (96.1%), mean utilisation 0.480
+15:47:54 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 11,791.9, 6,072/6,235 requests served (97.4%), mean utilisation 0.444
+15:47:55 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 17,099.4, 6,500/6,766 requests served (96.1%), mean utilisation 0.478
+15:47:56 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 13,628.1, 6,064/6,235 requests served (97.3%), mean utilisation 0.439
+15:47:56 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 30727.5, |V|>0 on 28429/104400 states
+15:47:57 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 17,806.1, 6,517/6,766 requests served (96.3%), mean utilisation 0.478
+15:47:58 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 13,868.7, 6,069/6,235 requests served (97.3%), mean utilisation 0.439
+15:48:00 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 19,241.5, 6,512/6,766 requests served (96.2%), mean utilisation 0.475
+15:48:01 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 14,148.3, 6,080/6,235 requests served (97.5%), mean utilisation 0.438
+15:48:03 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 20,510.0, 6,529/6,766 requests served (96.5%), mean utilisation 0.472
+15:48:04 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 15,818.4, 6,078/6,235 requests served (97.5%), mean utilisation 0.435
+15:48:05 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 20,072.9, 6,494/6,766 requests served (96.0%), mean utilisation 0.469
+15:48:06 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 16,050.3, 6,068/6,235 requests served (97.3%), mean utilisation 0.433
+15:48:07 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 21,139.5, 6,501/6,766 requests served (96.1%), mean utilisation 0.469
+15:48:08 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 17,318.4, 6,084/6,235 requests served (97.6%), mean utilisation 0.432
+15:48:09 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 21,201.8, 6,505/6,766 requests served (96.1%), mean utilisation 0.468
+15:48:11 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 17,773.1, 6,074/6,235 requests served (97.4%), mean utilisation 0.429
+15:48:12 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 22,104.9, 6,506/6,766 requests served (96.2%), mean utilisation 0.466
+15:48:13 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 18,001.9, 6,070/6,235 requests served (97.4%), mean utilisation 0.428
+15:48:15 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 22,993.4, 6,512/6,766 requests served (96.2%), mean utilisation 0.464
+15:48:17 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 18,781.8, 6,076/6,235 requests served (97.4%), mean utilisation 0.426
+15:48:19 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 24,127.1, 6,499/6,766 requests served (96.1%), mean utilisation 0.461
+15:48:21 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 19,427.3, 6,088/6,235 requests served (97.6%), mean utilisation 0.424
+15:48:22 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 24,231.4, 6,517/6,766 requests served (96.3%), mean utilisation 0.460
+15:48:23 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 20,740.6, 6,081/6,235 requests served (97.5%), mean utilisation 0.421
+15:48:23 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 44972.0, |V|>0 on 35500/104400 states
+15:48:25 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 25,715.9, 6,543/6,766 requests served (96.7%), mean utilisation 0.459
+15:48:27 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 21,155.3, 6,068/6,235 requests served (97.3%), mean utilisation 0.419
+15:48:28 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 25,915.5, 6,515/6,766 requests served (96.3%), mean utilisation 0.457
+15:48:30 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 21,345.7, 6,086/6,235 requests served (97.6%), mean utilisation 0.420
+15:48:32 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 26,484.7, 6,545/6,766 requests served (96.7%), mean utilisation 0.457
+15:48:33 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 22,506.1, 6,092/6,235 requests served (97.7%), mean utilisation 0.417
+15:48:35 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 27,105.6, 6,503/6,766 requests served (96.1%), mean utilisation 0.453
+15:48:37 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 23,943.8, 6,096/6,235 requests served (97.8%), mean utilisation 0.414
+15:48:41 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 27,781.5, 6,494/6,766 requests served (96.0%), mean utilisation 0.450
+15:48:46 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 23,280.2, 6,076/6,235 requests served (97.4%), mean utilisation 0.414
+15:48:48 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 29,184.1, 6,509/6,766 requests served (96.2%), mean utilisation 0.449
+15:48:50 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 24,327.3, 6,077/6,235 requests served (97.5%), mean utilisation 0.412
+15:48:53 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 29,513.6, 6,484/6,766 requests served (95.8%), mean utilisation 0.444
+15:48:55 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 24,588.4, 6,069/6,235 requests served (97.3%), mean utilisation 0.410
+15:48:58 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 30,315.7, 6,497/6,766 requests served (96.0%), mean utilisation 0.444
+15:49:00 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 26,523.6, 6,085/6,235 requests served (97.6%), mean utilisation 0.406
+15:49:02 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 30,851.4, 6,515/6,766 requests served (96.3%), mean utilisation 0.444
+15:49:04 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 26,240.7, 6,095/6,235 requests served (97.8%), mean utilisation 0.408
+15:49:05 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 31,786.3, 6,525/6,766 requests served (96.4%), mean utilisation 0.442
+15:49:07 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 27,430.7, 6,109/6,235 requests served (98.0%), mean utilisation 0.405
+15:49:07 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 59217.0, |V|>0 on 39490/104400 states
+15:49:07 | INFO    | ltf                | training Kang et al. (totals) [money] (30 episodes over 2 scenario(s)) done in 91.4s
+15:49:09 | INFO    | ltf                | Kang et al. (totals) [money]: total utility 43,638.4, 4,967/6,492 requests served (76.5%), mean utilisation 0.328
+15:49:09 | INFO    | ltf                | training Ours (Gap 1+2) [money] (30 episodes over 2 scenario(s)) ...
+15:49:11 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 10,585.0, 6,491/6,766 requests served (95.9%), mean utilisation 0.494
+15:49:13 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 7,414.9, 6,078/6,235 requests served (97.5%), mean utilisation 0.456
+15:49:16 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 12,079.5, 6,529/6,766 requests served (96.5%), mean utilisation 0.494
+15:49:18 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 8,198.7, 6,053/6,235 requests served (97.1%), mean utilisation 0.454
+15:49:21 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 11,692.6, 6,502/6,766 requests served (96.1%), mean utilisation 0.493
+15:49:23 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 8,451.6, 6,061/6,235 requests served (97.2%), mean utilisation 0.453
+15:49:26 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 13,114.1, 6,511/6,766 requests served (96.2%), mean utilisation 0.490
+15:49:28 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 9,252.1, 6,074/6,235 requests served (97.4%), mean utilisation 0.452
+15:49:31 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 12,725.3, 6,510/6,766 requests served (96.2%), mean utilisation 0.490
+15:49:33 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 9,840.7, 6,072/6,235 requests served (97.4%), mean utilisation 0.450
+15:49:36 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 13,915.6, 6,510/6,766 requests served (96.2%), mean utilisation 0.488
+15:49:38 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 9,859.1, 6,063/6,235 requests served (97.2%), mean utilisation 0.448
+15:49:40 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 15,328.1, 6,518/6,766 requests served (96.3%), mean utilisation 0.486
+15:49:42 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 11,135.3, 6,074/6,235 requests served (97.4%), mean utilisation 0.447
+15:49:44 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 15,791.2, 6,511/6,766 requests served (96.2%), mean utilisation 0.481
+15:49:46 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 11,956.7, 6,063/6,235 requests served (97.2%), mean utilisation 0.444
+15:49:48 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 16,801.2, 6,511/6,766 requests served (96.2%), mean utilisation 0.482
+15:49:49 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 12,675.1, 6,080/6,235 requests served (97.5%), mean utilisation 0.442
+15:49:51 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 16,589.5, 6,510/6,766 requests served (96.2%), mean utilisation 0.482
+15:49:53 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 13,025.5, 6,083/6,235 requests served (97.6%), mean utilisation 0.442
+15:49:53 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 29615.0, |V|>0 on 27547/104400 states
+15:49:55 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 17,737.9, 6,515/6,766 requests served (96.3%), mean utilisation 0.478
+15:49:56 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 13,566.2, 6,070/6,235 requests served (97.4%), mean utilisation 0.440
+15:49:58 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 18,517.1, 6,497/6,766 requests served (96.0%), mean utilisation 0.475
+15:49:59 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 14,211.5, 6,091/6,235 requests served (97.7%), mean utilisation 0.439
+15:50:01 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 19,161.7, 6,498/6,766 requests served (96.0%), mean utilisation 0.474
+15:50:03 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 14,741.3, 6,074/6,235 requests served (97.4%), mean utilisation 0.437
+15:50:04 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 20,135.5, 6,529/6,766 requests served (96.5%), mean utilisation 0.473
+15:50:06 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 15,179.7, 6,072/6,235 requests served (97.4%), mean utilisation 0.435
+15:50:07 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 20,605.8, 6,508/6,766 requests served (96.2%), mean utilisation 0.470
+15:50:09 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 17,357.2, 6,081/6,235 requests served (97.5%), mean utilisation 0.430
+15:50:10 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 21,199.2, 6,517/6,766 requests served (96.3%), mean utilisation 0.469
+15:50:12 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 17,272.4, 6,067/6,235 requests served (97.3%), mean utilisation 0.431
+15:50:15 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 22,292.0, 6,516/6,766 requests served (96.3%), mean utilisation 0.466
+15:50:17 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 18,290.0, 6,089/6,235 requests served (97.7%), mean utilisation 0.429
+15:50:19 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 22,144.4, 6,530/6,766 requests served (96.5%), mean utilisation 0.469
+15:50:21 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 18,623.8, 6,073/6,235 requests served (97.4%), mean utilisation 0.426
+15:50:23 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 23,392.4, 6,501/6,766 requests served (96.1%), mean utilisation 0.462
+15:50:25 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 18,901.6, 6,074/6,235 requests served (97.4%), mean utilisation 0.425
+15:50:27 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 24,298.6, 6,500/6,766 requests served (96.1%), mean utilisation 0.460
+15:50:29 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 19,475.8, 6,059/6,235 requests served (97.2%), mean utilisation 0.423
+15:50:29 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 43774.4, |V|>0 on 34715/104400 states
+15:50:30 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 25,195.3, 6,518/6,766 requests served (96.3%), mean utilisation 0.460
+15:50:32 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 19,876.6, 6,082/6,235 requests served (97.5%), mean utilisation 0.423
+15:50:34 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 26,001.9, 6,517/6,766 requests served (96.3%), mean utilisation 0.456
+15:50:35 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 21,010.3, 6,096/6,235 requests served (97.8%), mean utilisation 0.422
+15:50:36 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 26,489.8, 6,526/6,766 requests served (96.5%), mean utilisation 0.457
+15:50:37 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 22,042.6, 6,088/6,235 requests served (97.6%), mean utilisation 0.418
+15:50:39 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 26,496.1, 6,529/6,766 requests served (96.5%), mean utilisation 0.457
+15:50:40 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 22,737.1, 6,078/6,235 requests served (97.5%), mean utilisation 0.416
+15:50:41 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 27,801.1, 6,511/6,766 requests served (96.2%), mean utilisation 0.451
+15:50:43 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 23,017.5, 6,087/6,235 requests served (97.6%), mean utilisation 0.415
+15:50:44 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 28,556.3, 6,537/6,766 requests served (96.6%), mean utilisation 0.451
+15:50:45 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 23,421.3, 6,083/6,235 requests served (97.6%), mean utilisation 0.414
+15:50:46 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 29,042.1, 6,505/6,766 requests served (96.1%), mean utilisation 0.447
+15:50:47 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 24,223.3, 6,076/6,235 requests served (97.4%), mean utilisation 0.412
+15:50:48 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 29,557.3, 6,539/6,766 requests served (96.6%), mean utilisation 0.448
+15:50:50 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 25,056.6, 6,098/6,235 requests served (97.8%), mean utilisation 0.410
+15:50:51 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 30,239.9, 6,526/6,766 requests served (96.5%), mean utilisation 0.445
+15:50:52 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 25,755.3, 6,069/6,235 requests served (97.3%), mean utilisation 0.407
+15:50:53 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 30,649.9, 6,525/6,766 requests served (96.4%), mean utilisation 0.445
+15:50:55 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 27,267.9, 6,105/6,235 requests served (97.9%), mean utilisation 0.405
+15:50:55 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 57917.9, |V|>0 on 38825/104400 states
+15:50:55 | INFO    | ltf                | training Ours (Gap 1+2) [money] (30 episodes over 2 scenario(s)) done in 105.6s
+15:50:56 | INFO    | ltf                | Ours (Gap 1+2) [money]: total utility 42,960.4, 4,805/6,492 requests served (74.0%), mean utilisation 0.320
+
+====================================================================================================
+2. MONEY-DENOMINATED UTILITY (fare per km = $3.95)
+====================================================================================================
+                      method variant  total_utility  fairness_total_var  rate_var  rate_var_between  rate_full_time  rate_part_time  rate_group_ratio  util_var  util_adj_var  n_idle_drivers  service_rate
+Kang et al. (totals) [money]   money   43638.411582         8679.729282 25.600437          7.726600        6.618473       12.345201          1.865264  0.014784      0.304642               1      0.765096
+      Ours (Gap 1+2) [money]   money   42960.439475        24206.221123  5.869666          0.016475        8.198541        7.934102          0.967746  0.006664      0.111332               0      0.740142
+
+  group ratio: Kang 1.865 -> ours 0.968
+  between-group Var: 7.7266 -> 0.0165
+  hourly rate in $/h: Kang FT $6.62 vs PT $12.35; ours FT $8.20 vs PT $7.93
+  The group gap survives the change of units, so it is a property
+  of the allocation, not of distance-denominated utility.
+
+====================================================================================================
+3. PAPER-FAITHFUL PROTOCOL (peak 2h/day, 1-hour steps, rate 0.05, static utility)
+====================================================================================================
+15:50:56 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+15:50:56 | INFO    | ltf                |   online hours: full-time mean 6.7 (min 0.0 max 14.0), part-time mean 1.6 (min 0.0 max 8.0)
+15:50:56 | INFO    | ltf                |   hours ratio between groups: 4.07x; total online slots 713
+15:50:56 | INFO    | ltf                |   concurrent online drivers: min 40, median 51, max 65
+15:50:59 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 5.5 min (1.45 km @ 15.7 km/h) -> 1 slots of 60 min
+15:50:59 | INFO    | ltf                | requests: 14469 over 14 slots (rate 0.0500), 1033.5 per slot, 2067 per day
+15:50:59 | INFO    | ltf                | sample rate pinned at 0.05000, measured offered load 20.408
+15:50:59 | INFO    | ltf                | scenario ready
+Timeline: 14 slots of 60 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 6/2/6 slots
+drivers: 200, online slots 713, concurrent min/med/max 40/51/65
+requests: 14,469 (rate 0.05000), 1033.5 per slot, offered load 20.408
+nodes: 87, utility mode 'paper' in distance units
+15:51:00 | INFO    | ltf                | warmup (efficiency only): total utility 4,998.0, 678/14,469 requests served (4.7%), mean utilisation 0.952
+15:51:00 | INFO    | ltf                | calibrated omegas: total=4.002 rate=98.63 util=6203
+15:51:00 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+15:51:00 | INFO    | ltf                |   online hours: full-time mean 6.7 (min 0.0 max 14.0), part-time mean 1.6 (min 0.0 max 8.0)
+15:51:00 | INFO    | ltf                |   hours ratio between groups: 4.07x; total online slots 713
+15:51:00 | INFO    | ltf                |   concurrent online drivers: min 40, median 51, max 65
+15:51:01 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 5.5 min (1.45 km @ 15.7 km/h) -> 1 slots of 60 min
+15:51:01 | INFO    | ltf                | requests: 14914 over 14 slots (rate 0.0500), 1065.3 per slot, 2131 per day
+15:51:01 | INFO    | ltf                | sample rate pinned at 0.05000, measured offered load 21.045
+15:51:01 | INFO    | ltf                | scenario ready
+Timeline: 14 slots of 60 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 6/2/6 slots
+drivers: 200, online slots 713, concurrent min/med/max 40/51/65
+requests: 14,914 (rate 0.05000), 1065.3 per slot, offered load 21.045
+nodes: 87, utility mode 'paper' in distance units
+15:51:01 | INFO    | ltf                | forecaster ...
+15:51:01 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+15:51:01 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+15:51:08 | INFO    | ltf                | training forecaster on mps ...
+15:52:13 | INFO    | ltf                |   early stop at epoch 19 (val MSE 0.13023)
+15:52:13 | INFO    | ltf                | training forecaster on mps done in 65.7s
+15:52:32 | INFO    | ltf                | forecaster test: demand MSE 0.1349 (log space), 6.68 (counts); seasonal-naive 8.86 -> 24.5% better
+15:52:32 | INFO    | ltf                | forecaster done in 90.8s
+15:52:42 | INFO    | ltf                | synthetic (predicted) requests: 13049 over 14 slots
+15:52:42 | INFO    | ltf                | training Kang et al. (paper protocol) (30 episodes over 2 scenario(s)) ...
+15:52:44 | INFO    | ltf                | Kang et al. (paper protocol): total utility 791.0, 707/14,914 requests served (4.7%), mean utilisation 0.993
+15:52:46 | INFO    | ltf                | Kang et al. (paper protocol): total utility 882.5, 699/13,049 requests served (5.4%), mean utilisation 0.980
+15:52:48 | INFO    | ltf                | Kang et al. (paper protocol): total utility 817.4, 707/14,914 requests served (4.7%), mean utilisation 0.993
+15:52:49 | INFO    | ltf                | Kang et al. (paper protocol): total utility 768.7, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:52:51 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,139.5, 709/14,914 requests served (4.8%), mean utilisation 0.997
+15:52:52 | INFO    | ltf                | Kang et al. (paper protocol): total utility 801.7, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:52:54 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,159.0, 705/14,914 requests served (4.7%), mean utilisation 0.990
+15:52:55 | INFO    | ltf                | Kang et al. (paper protocol): total utility 951.8, 709/13,049 requests served (5.4%), mean utilisation 0.994
+15:52:56 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,237.7, 708/14,914 requests served (4.7%), mean utilisation 0.993
+15:52:57 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,011.6, 705/13,049 requests served (5.4%), mean utilisation 0.989
+15:53:00 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,335.7, 705/14,914 requests served (4.7%), mean utilisation 0.992
+15:53:02 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,099.1, 705/13,049 requests served (5.4%), mean utilisation 0.989
+15:53:04 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,467.1, 711/14,914 requests served (4.8%), mean utilisation 0.999
+15:53:05 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,363.5, 700/13,049 requests served (5.4%), mean utilisation 0.982
+15:53:07 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,728.2, 707/14,914 requests served (4.7%), mean utilisation 0.993
+15:53:07 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,408.9, 709/13,049 requests served (5.4%), mean utilisation 0.994
+15:53:08 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,686.9, 709/14,914 requests served (4.8%), mean utilisation 0.996
+15:53:09 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,589.0, 708/13,049 requests served (5.4%), mean utilisation 0.993
+15:53:11 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,809.4, 704/14,914 requests served (4.7%), mean utilisation 0.987
+15:53:12 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,696.6, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:53:12 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 3506.0, |V|>0 on 309/4176 states
+15:53:15 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,976.1, 708/14,914 requests served (4.7%), mean utilisation 0.994
+15:53:17 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,683.2, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:53:19 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,022.0, 702/14,914 requests served (4.7%), mean utilisation 0.986
+15:53:20 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,876.4, 705/13,049 requests served (5.4%), mean utilisation 0.989
+15:53:22 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,083.5, 706/14,914 requests served (4.7%), mean utilisation 0.993
+15:53:23 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,104.4, 705/13,049 requests served (5.4%), mean utilisation 0.989
+15:53:24 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,215.0, 704/14,914 requests served (4.7%), mean utilisation 0.990
+15:53:25 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,993.5, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:53:27 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,325.1, 704/14,914 requests served (4.7%), mean utilisation 0.990
+15:53:29 | INFO    | ltf                | Kang et al. (paper protocol): total utility 1,965.2, 702/13,049 requests served (5.4%), mean utilisation 0.985
+15:53:30 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,386.4, 706/14,914 requests served (4.7%), mean utilisation 0.993
+15:53:32 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,319.7, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:53:33 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,402.3, 703/14,914 requests served (4.7%), mean utilisation 0.987
+15:53:34 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,291.4, 707/13,049 requests served (5.4%), mean utilisation 0.992
+15:53:36 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,900.3, 709/14,914 requests served (4.8%), mean utilisation 0.997
+15:53:37 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,365.5, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:53:38 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,765.9, 700/14,914 requests served (4.7%), mean utilisation 0.985
+15:53:39 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,467.8, 709/13,049 requests served (5.4%), mean utilisation 0.994
+15:53:40 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,677.3, 701/14,914 requests served (4.7%), mean utilisation 0.986
+15:53:42 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,582.2, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:53:42 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 5259.4, |V|>0 on 325/4176 states
+15:53:43 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,852.9, 702/14,914 requests served (4.7%), mean utilisation 0.987
+15:53:45 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,808.6, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:53:46 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,995.8, 708/14,914 requests served (4.7%), mean utilisation 0.996
+15:53:48 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,648.3, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:53:49 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,042.4, 704/14,914 requests served (4.7%), mean utilisation 0.989
+15:53:50 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,822.8, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:53:52 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,022.5, 698/14,914 requests served (4.7%), mean utilisation 0.982
+15:53:53 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,907.1, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:53:54 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,240.7, 707/14,914 requests served (4.7%), mean utilisation 0.993
+15:53:55 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,930.4, 707/13,049 requests served (5.4%), mean utilisation 0.992
+15:53:57 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,197.9, 708/14,914 requests served (4.7%), mean utilisation 0.994
+15:53:58 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,008.2, 707/13,049 requests served (5.4%), mean utilisation 0.992
+15:54:00 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,178.3, 707/14,914 requests served (4.7%), mean utilisation 0.994
+15:54:01 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,085.6, 707/13,049 requests served (5.4%), mean utilisation 0.992
+15:54:02 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,254.3, 703/14,914 requests served (4.7%), mean utilisation 0.989
+15:54:04 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,104.9, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:54:05 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,185.2, 704/14,914 requests served (4.7%), mean utilisation 0.990
+15:54:06 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,143.4, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:54:08 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,282.7, 707/14,914 requests served (4.7%), mean utilisation 0.994
+15:54:09 | INFO    | ltf                | Kang et al. (paper protocol): total utility 3,085.7, 709/13,049 requests served (5.4%), mean utilisation 0.994
+15:54:09 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 6368.4, |V|>0 on 327/4176 states
+15:54:09 | INFO    | ltf                | training Kang et al. (paper protocol) (30 episodes over 2 scenario(s)) done in 86.9s
+15:54:10 | INFO    | ltf                | Kang et al. (paper protocol): total utility 2,963.3, 380/14,469 requests served (2.6%), mean utilisation 0.536
+15:54:10 | INFO    | ltf                | training Ours (paper protocol) (30 episodes over 2 scenario(s)) ...
+15:54:12 | INFO    | ltf                | Ours (paper protocol): total utility 687.7, 711/14,914 requests served (4.8%), mean utilisation 0.999
+15:54:14 | INFO    | ltf                | Ours (paper protocol): total utility 767.8, 698/13,049 requests served (5.3%), mean utilisation 0.979
+15:54:17 | INFO    | ltf                | Ours (paper protocol): total utility 853.0, 710/14,914 requests served (4.8%), mean utilisation 0.997
+15:54:18 | INFO    | ltf                | Ours (paper protocol): total utility 913.0, 702/13,049 requests served (5.4%), mean utilisation 0.985
+15:54:20 | INFO    | ltf                | Ours (paper protocol): total utility 1,273.4, 708/14,914 requests served (4.7%), mean utilisation 0.994
+15:54:23 | INFO    | ltf                | Ours (paper protocol): total utility 825.2, 700/13,049 requests served (5.4%), mean utilisation 0.982
+15:54:25 | INFO    | ltf                | Ours (paper protocol): total utility 1,211.4, 702/14,914 requests served (4.7%), mean utilisation 0.986
+15:54:27 | INFO    | ltf                | Ours (paper protocol): total utility 946.0, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:54:29 | INFO    | ltf                | Ours (paper protocol): total utility 1,201.8, 699/14,914 requests served (4.7%), mean utilisation 0.980
+15:54:31 | INFO    | ltf                | Ours (paper protocol): total utility 1,038.6, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:54:34 | INFO    | ltf                | Ours (paper protocol): total utility 1,311.1, 703/14,914 requests served (4.7%), mean utilisation 0.987
+15:54:35 | INFO    | ltf                | Ours (paper protocol): total utility 1,176.1, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:54:37 | INFO    | ltf                | Ours (paper protocol): total utility 1,544.0, 706/14,914 requests served (4.7%), mean utilisation 0.992
+15:54:39 | INFO    | ltf                | Ours (paper protocol): total utility 1,389.5, 692/13,049 requests served (5.3%), mean utilisation 0.971
+15:54:41 | INFO    | ltf                | Ours (paper protocol): total utility 1,748.2, 699/14,914 requests served (4.7%), mean utilisation 0.982
+15:54:43 | INFO    | ltf                | Ours (paper protocol): total utility 1,546.6, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:54:45 | INFO    | ltf                | Ours (paper protocol): total utility 1,744.2, 704/14,914 requests served (4.7%), mean utilisation 0.989
+15:54:47 | INFO    | ltf                | Ours (paper protocol): total utility 1,567.2, 700/13,049 requests served (5.4%), mean utilisation 0.982
+15:54:49 | INFO    | ltf                | Ours (paper protocol): total utility 1,880.4, 703/14,914 requests served (4.7%), mean utilisation 0.987
+15:54:51 | INFO    | ltf                | Ours (paper protocol): total utility 1,638.6, 702/13,049 requests served (5.4%), mean utilisation 0.985
+15:54:51 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 3519.1, |V|>0 on 308/4176 states
+15:54:53 | INFO    | ltf                | Ours (paper protocol): total utility 1,912.9, 687/14,914 requests served (4.6%), mean utilisation 0.965
+15:54:54 | INFO    | ltf                | Ours (paper protocol): total utility 1,743.9, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:54:56 | INFO    | ltf                | Ours (paper protocol): total utility 2,137.8, 697/14,914 requests served (4.7%), mean utilisation 0.979
+15:54:58 | INFO    | ltf                | Ours (paper protocol): total utility 1,766.6, 700/13,049 requests served (5.4%), mean utilisation 0.982
+15:55:00 | INFO    | ltf                | Ours (paper protocol): total utility 2,054.5, 704/14,914 requests served (4.7%), mean utilisation 0.989
+15:55:02 | INFO    | ltf                | Ours (paper protocol): total utility 2,096.2, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:55:04 | INFO    | ltf                | Ours (paper protocol): total utility 2,166.4, 696/14,914 requests served (4.7%), mean utilisation 0.978
+15:55:06 | INFO    | ltf                | Ours (paper protocol): total utility 2,140.3, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:55:08 | INFO    | ltf                | Ours (paper protocol): total utility 2,316.0, 692/14,914 requests served (4.6%), mean utilisation 0.973
+15:55:09 | INFO    | ltf                | Ours (paper protocol): total utility 2,056.8, 700/13,049 requests served (5.4%), mean utilisation 0.982
+15:55:11 | INFO    | ltf                | Ours (paper protocol): total utility 2,439.7, 691/14,914 requests served (4.6%), mean utilisation 0.971
+15:55:13 | INFO    | ltf                | Ours (paper protocol): total utility 2,236.9, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:55:15 | INFO    | ltf                | Ours (paper protocol): total utility 2,583.3, 699/14,914 requests served (4.7%), mean utilisation 0.982
+15:55:17 | INFO    | ltf                | Ours (paper protocol): total utility 2,267.0, 697/13,049 requests served (5.3%), mean utilisation 0.978
+15:55:19 | INFO    | ltf                | Ours (paper protocol): total utility 2,882.8, 704/14,914 requests served (4.7%), mean utilisation 0.989
+15:55:21 | INFO    | ltf                | Ours (paper protocol): total utility 2,451.4, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:55:23 | INFO    | ltf                | Ours (paper protocol): total utility 2,759.6, 704/14,914 requests served (4.7%), mean utilisation 0.989
+15:55:25 | INFO    | ltf                | Ours (paper protocol): total utility 2,500.9, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:55:27 | INFO    | ltf                | Ours (paper protocol): total utility 2,686.0, 698/14,914 requests served (4.7%), mean utilisation 0.980
+15:55:28 | INFO    | ltf                | Ours (paper protocol): total utility 2,625.1, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:55:28 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 5311.1, |V|>0 on 328/4176 states
+15:55:31 | INFO    | ltf                | Ours (paper protocol): total utility 2,914.0, 697/14,914 requests served (4.7%), mean utilisation 0.979
+15:55:32 | INFO    | ltf                | Ours (paper protocol): total utility 2,625.7, 697/13,049 requests served (5.3%), mean utilisation 0.978
+15:55:35 | INFO    | ltf                | Ours (paper protocol): total utility 2,899.8, 693/14,914 requests served (4.6%), mean utilisation 0.973
+15:55:36 | INFO    | ltf                | Ours (paper protocol): total utility 2,797.0, 702/13,049 requests served (5.4%), mean utilisation 0.985
+15:55:38 | INFO    | ltf                | Ours (paper protocol): total utility 2,970.9, 693/14,914 requests served (4.6%), mean utilisation 0.973
+15:55:40 | INFO    | ltf                | Ours (paper protocol): total utility 2,969.8, 709/13,049 requests served (5.4%), mean utilisation 0.994
+15:55:42 | INFO    | ltf                | Ours (paper protocol): total utility 3,253.7, 700/14,914 requests served (4.7%), mean utilisation 0.983
+15:55:43 | INFO    | ltf                | Ours (paper protocol): total utility 2,938.1, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:55:45 | INFO    | ltf                | Ours (paper protocol): total utility 3,270.5, 700/14,914 requests served (4.7%), mean utilisation 0.983
+15:55:47 | INFO    | ltf                | Ours (paper protocol): total utility 3,175.6, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:55:49 | INFO    | ltf                | Ours (paper protocol): total utility 3,325.5, 698/14,914 requests served (4.7%), mean utilisation 0.980
+15:55:51 | INFO    | ltf                | Ours (paper protocol): total utility 3,094.6, 701/13,049 requests served (5.4%), mean utilisation 0.983
+15:55:54 | INFO    | ltf                | Ours (paper protocol): total utility 3,454.2, 700/14,914 requests served (4.7%), mean utilisation 0.983
+15:55:55 | INFO    | ltf                | Ours (paper protocol): total utility 3,139.6, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:55:57 | INFO    | ltf                | Ours (paper protocol): total utility 3,631.7, 703/14,914 requests served (4.7%), mean utilisation 0.987
+15:55:59 | INFO    | ltf                | Ours (paper protocol): total utility 3,182.7, 703/13,049 requests served (5.4%), mean utilisation 0.986
+15:56:01 | INFO    | ltf                | Ours (paper protocol): total utility 3,436.5, 697/14,914 requests served (4.7%), mean utilisation 0.979
+15:56:02 | INFO    | ltf                | Ours (paper protocol): total utility 3,355.0, 706/13,049 requests served (5.4%), mean utilisation 0.990
+15:56:04 | INFO    | ltf                | Ours (paper protocol): total utility 3,586.8, 696/14,914 requests served (4.7%), mean utilisation 0.978
+15:56:05 | INFO    | ltf                | Ours (paper protocol): total utility 3,158.4, 704/13,049 requests served (5.4%), mean utilisation 0.987
+15:56:05 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 6745.2, |V|>0 on 331/4176 states
+15:56:05 | INFO    | ltf                | training Ours (paper protocol) (30 episodes over 2 scenario(s)) done in 115.5s
+15:56:07 | INFO    | ltf                | Ours (paper protocol): total utility 3,362.6, 431/14,469 requests served (3.0%), mean utilisation 0.606
+
+====================================================================================================
+paper-protocol results
+====================================================================================================
+                      method        variant  total_utility  fairness_total_var  rate_var  rate_var_between  rate_full_time  rate_part_time  rate_group_ratio  util_var  util_adj_var  n_idle_drivers  service_rate
+Kang et al. (paper protocol) paper_protocol    2963.276738          246.676243  4.599368          1.108401        4.020532        6.146141          1.528688  0.141549  1.406511e+23              99      0.026263
+       Ours (paper protocol) paper_protocol    3362.643512          539.477867  4.202696          1.369119        3.569551        5.931961          1.661823  0.104084  7.498622e+22             106      0.029788
+
+  driver hours under this protocol: max 14.0 h/week, mean 3.6 h
+  full-time threshold is 40 h, so 0 of 200 drivers can reach it.
+  This is the structural limitation of the paper's protocol: the
+  window is too short for a full-time/part-time contrast to exist,
+  which is exactly why the main experiments use a full-day timeline.
+  The group columns above are therefore NOT interpretable.
+
+====================================================================================================
+4. SEED SENSITIVITY (fleet, request sample and RL exploration all re-drawn)
+====================================================================================================
+15:56:07 | INFO    | ltf                | drivers: 200 (82 full-time, 118 part-time) over 7 days
+15:56:07 | INFO    | ltf                |   online hours: full-time mean 46.1 (min 30.0 max 55.2), part-time mean 14.2 (min 4.3 max 21.0)
+15:56:07 | INFO    | ltf                |   hours ratio between groups: 3.26x; total online slots 65410
+15:56:07 | INFO    | ltf                |   concurrent online drivers: min 0, median 36, max 56
+15:56:12 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+15:56:12 | INFO    | ltf                | calibrated sample rate 0.00440: 65410 online slots x target 0.60 / 4 slots per job = 9812 jobs, from 2231191 available requests
+15:56:14 | INFO    | ltf                | requests: 9806 over 2016 slots (rate 0.0044), 4.9 per slot, 1401 per day
+15:56:17 | INFO    | ltf                | requests: 6803 over 2016 slots (rate 0.0030), 3.4 per slot, 972 per day
+15:56:17 | INFO    | ltf                |   calibration step 1: rate 0.003050 -> offered load 0.601 (target 0.60)
+15:56:17 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 65,410, concurrent min/med/max 0/36/56
+requests: 6,803 (rate 0.00305), 3.4 per slot, offered load 0.601
+nodes: 87, utility mode 'time_aware' in distance units
+15:56:17 | INFO    | ltf                | warmup (efficiency only): total utility 12,429.9, 4,990/6,689 requests served (74.6%), mean utilisation 0.308
+15:56:17 | INFO    | ltf                | calibrated omegas: total=1.609 rate=1180 util=6.513e+04
+15:56:18 | INFO    | ltf                | drivers: 200 (82 full-time, 118 part-time) over 7 days
+15:56:18 | INFO    | ltf                |   online hours: full-time mean 46.1 (min 30.0 max 55.2), part-time mean 14.2 (min 4.3 max 21.0)
+15:56:18 | INFO    | ltf                |   hours ratio between groups: 3.26x; total online slots 65410
+15:56:18 | INFO    | ltf                |   concurrent online drivers: min 0, median 36, max 56
+15:56:19 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+15:56:20 | INFO    | ltf                | requests: 7083 over 2016 slots (rate 0.0030), 3.5 per slot, 1012 per day
+15:56:20 | INFO    | ltf                | sample rate pinned at 0.00305, measured offered load 0.624
+15:56:20 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 65,410, concurrent min/med/max 0/36/56
+requests: 7,083 (rate 0.00305), 3.5 per slot, offered load 0.624
+nodes: 87, utility mode 'time_aware' in distance units
+15:56:20 | INFO    | ltf                | forecaster ...
+15:56:20 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+15:56:20 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+15:56:27 | INFO    | ltf                | training forecaster on mps ...
+15:58:54 | INFO    | ltf                |   early stop at epoch 44 (val MSE 0.12965)
+15:58:55 | INFO    | ltf                | training forecaster on mps done in 147.4s
+15:59:10 | INFO    | ltf                | forecaster test: demand MSE 0.1369 (log space), 6.38 (counts); seasonal-naive 8.86 -> 28.0% better
+15:59:10 | INFO    | ltf                | forecaster test: congestion MSE 0.01246, MAE 0.0838 (on directly-measured cells)
+15:59:10 | INFO    | ltf                | forecaster done in 170.2s
+15:59:23 | INFO    | ltf                | synthetic (predicted) requests: 6400 over 2016 slots
+15:59:23 | INFO    | ltf                | training Kang et al. (totals) [seed1] (30 episodes over 2 scenario(s)) ...
+15:59:25 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,433.2, 6,793/6,972 requests served (97.4%), mean utilisation 0.498
+15:59:26 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 1,621.1, 6,159/6,283 requests served (98.0%), mean utilisation 0.450
+15:59:28 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,579.0, 6,800/6,972 requests served (97.5%), mean utilisation 0.496
+15:59:30 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 1,997.7, 6,157/6,283 requests served (98.0%), mean utilisation 0.447
+15:59:31 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,727.6, 6,804/6,972 requests served (97.6%), mean utilisation 0.497
+15:59:33 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 1,905.4, 6,155/6,283 requests served (98.0%), mean utilisation 0.448
+15:59:34 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,740.2, 6,794/6,972 requests served (97.4%), mean utilisation 0.493
+15:59:37 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 2,206.1, 6,154/6,283 requests served (97.9%), mean utilisation 0.445
+15:59:41 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,917.8, 6,820/6,972 requests served (97.8%), mean utilisation 0.495
+15:59:43 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 2,172.3, 6,153/6,283 requests served (97.9%), mean utilisation 0.445
+15:59:45 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,027.6, 6,810/6,972 requests served (97.7%), mean utilisation 0.493
+15:59:48 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 2,551.1, 6,162/6,283 requests served (98.1%), mean utilisation 0.443
+15:59:51 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,433.9, 6,812/6,972 requests served (97.7%), mean utilisation 0.489
+15:59:53 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 2,542.8, 6,146/6,283 requests served (97.8%), mean utilisation 0.440
+15:59:56 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,616.0, 6,795/6,972 requests served (97.5%), mean utilisation 0.485
+15:59:58 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 2,828.1, 6,158/6,283 requests served (98.0%), mean utilisation 0.439
+16:00:00 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,668.8, 6,813/6,972 requests served (97.7%), mean utilisation 0.486
+16:00:02 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,143.7, 6,158/6,283 requests served (98.0%), mean utilisation 0.435
+16:00:04 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,761.2, 6,793/6,972 requests served (97.4%), mean utilisation 0.485
+16:00:05 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,468.6, 6,150/6,283 requests served (97.9%), mean utilisation 0.432
+16:00:05 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 8229.8, |V|>0 on 29282/104400 states
+16:00:07 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,977.1, 6,813/6,972 requests served (97.7%), mean utilisation 0.485
+16:00:09 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,349.4, 6,165/6,283 requests served (98.1%), mean utilisation 0.434
+16:00:10 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,300.3, 6,802/6,972 requests served (97.6%), mean utilisation 0.479
+16:00:12 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,484.7, 6,167/6,283 requests served (98.2%), mean utilisation 0.433
+16:00:13 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,453.1, 6,795/6,972 requests served (97.5%), mean utilisation 0.477
+16:00:16 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,679.7, 6,159/6,283 requests served (98.0%), mean utilisation 0.430
+16:00:18 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,711.0, 6,811/6,972 requests served (97.7%), mean utilisation 0.476
+16:00:20 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,948.2, 6,168/6,283 requests served (98.2%), mean utilisation 0.427
+16:00:21 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,743.2, 6,816/6,972 requests served (97.8%), mean utilisation 0.477
+16:00:23 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 3,917.2, 6,163/6,283 requests served (98.1%), mean utilisation 0.427
+16:00:24 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,098.8, 6,814/6,972 requests served (97.7%), mean utilisation 0.473
+16:00:26 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,258.9, 6,169/6,283 requests served (98.2%), mean utilisation 0.425
+16:00:28 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,195.1, 6,819/6,972 requests served (97.8%), mean utilisation 0.473
+16:00:30 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,476.4, 6,176/6,283 requests served (98.3%), mean utilisation 0.424
+16:00:32 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,188.4, 6,810/6,972 requests served (97.7%), mean utilisation 0.472
+16:00:34 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,652.8, 6,171/6,283 requests served (98.2%), mean utilisation 0.421
+16:00:35 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,544.2, 6,823/6,972 requests served (97.9%), mean utilisation 0.468
+16:00:36 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 4,833.1, 6,164/6,283 requests served (98.1%), mean utilisation 0.419
+16:00:38 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,822.5, 6,808/6,972 requests served (97.6%), mean utilisation 0.464
+16:00:38 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,027.2, 6,162/6,283 requests served (98.1%), mean utilisation 0.417
+16:00:38 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11849.7, |V|>0 on 36755/104400 states
+16:00:40 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,847.7, 6,821/6,972 requests served (97.8%), mean utilisation 0.465
+16:00:41 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,340.2, 6,176/6,283 requests served (98.3%), mean utilisation 0.414
+16:00:42 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 7,111.8, 6,810/6,972 requests served (97.7%), mean utilisation 0.461
+16:00:43 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,382.0, 6,167/6,283 requests served (98.2%), mean utilisation 0.413
+16:00:44 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 7,334.0, 6,838/6,972 requests served (98.1%), mean utilisation 0.461
+16:00:45 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,412.6, 6,169/6,283 requests served (98.2%), mean utilisation 0.414
+16:00:46 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 7,456.8, 6,807/6,972 requests served (97.6%), mean utilisation 0.458
+16:00:47 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,585.6, 6,169/6,283 requests served (98.2%), mean utilisation 0.411
+16:00:48 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 7,487.5, 6,816/6,972 requests served (97.8%), mean utilisation 0.459
+16:00:49 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 5,851.3, 6,161/6,283 requests served (98.1%), mean utilisation 0.407
+16:00:50 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 7,826.9, 6,810/6,972 requests served (97.7%), mean utilisation 0.454
+16:00:51 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,067.4, 6,172/6,283 requests served (98.2%), mean utilisation 0.407
+16:00:52 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 8,165.1, 6,807/6,972 requests served (97.6%), mean utilisation 0.450
+16:00:53 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,136.0, 6,168/6,283 requests served (98.2%), mean utilisation 0.405
+16:00:54 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 8,227.1, 6,808/6,972 requests served (97.6%), mean utilisation 0.450
+16:00:55 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,430.9, 6,171/6,283 requests served (98.2%), mean utilisation 0.403
+16:00:56 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 8,442.2, 6,836/6,972 requests served (98.0%), mean utilisation 0.450
+16:00:57 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,470.5, 6,171/6,283 requests served (98.2%), mean utilisation 0.401
+16:00:58 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 8,474.2, 6,820/6,972 requests served (97.8%), mean utilisation 0.448
+16:00:59 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 6,519.1, 6,170/6,283 requests served (98.2%), mean utilisation 0.402
+16:00:59 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14993.3, |V|>0 on 40929/104400 states
+16:00:59 | INFO    | ltf                | training Kang et al. (totals) [seed1] (30 episodes over 2 scenario(s)) done in 96.6s
+16:01:00 | INFO    | ltf                | Kang et al. (totals) [seed1]: total utility 11,380.8, 5,083/6,689 requests served (76.0%), mean utilisation 0.322
+16:01:00 | INFO    | ltf                | training Ours (Gap 1+2) [seed1] (30 episodes over 2 scenario(s)) ...
+16:01:02 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,356.3, 6,801/6,972 requests served (97.5%), mean utilisation 0.499
+16:01:03 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 1,680.1, 6,148/6,283 requests served (97.9%), mean utilisation 0.449
+16:01:04 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,207.1, 6,798/6,972 requests served (97.5%), mean utilisation 0.501
+16:01:06 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 1,843.4, 6,156/6,283 requests served (98.0%), mean utilisation 0.449
+16:01:08 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,587.2, 6,802/6,972 requests served (97.6%), mean utilisation 0.497
+16:01:10 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 2,050.1, 6,155/6,283 requests served (98.0%), mean utilisation 0.448
+16:01:12 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,689.7, 6,797/6,972 requests served (97.5%), mean utilisation 0.496
+16:01:14 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 2,051.0, 6,154/6,283 requests served (97.9%), mean utilisation 0.447
+16:01:17 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,921.6, 6,817/6,972 requests served (97.8%), mean utilisation 0.495
+16:01:19 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 2,272.5, 6,160/6,283 requests served (98.0%), mean utilisation 0.445
+16:01:21 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,020.6, 6,811/6,972 requests served (97.7%), mean utilisation 0.493
+16:01:22 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 2,430.8, 6,143/6,283 requests served (97.8%), mean utilisation 0.441
+16:01:23 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,199.8, 6,798/6,972 requests served (97.5%), mean utilisation 0.491
+16:01:25 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 2,753.4, 6,156/6,283 requests served (98.0%), mean utilisation 0.439
+16:01:26 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,587.5, 6,804/6,972 requests served (97.6%), mean utilisation 0.488
+16:01:28 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 2,687.3, 6,160/6,283 requests served (98.0%), mean utilisation 0.440
+16:01:29 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,553.2, 6,819/6,972 requests served (97.8%), mean utilisation 0.488
+16:01:30 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,063.1, 6,167/6,283 requests served (98.2%), mean utilisation 0.437
+16:01:32 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,613.2, 6,804/6,972 requests served (97.6%), mean utilisation 0.486
+16:01:33 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,215.5, 6,159/6,283 requests served (98.0%), mean utilisation 0.435
+16:01:33 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7828.8, |V|>0 on 28785/104400 states
+16:01:34 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,804.2, 6,802/6,972 requests served (97.6%), mean utilisation 0.484
+16:01:35 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,310.6, 6,168/6,283 requests served (98.2%), mean utilisation 0.435
+16:01:37 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,009.9, 6,807/6,972 requests served (97.6%), mean utilisation 0.483
+16:01:38 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,558.3, 6,161/6,283 requests served (98.1%), mean utilisation 0.431
+16:01:39 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,343.2, 6,798/6,972 requests served (97.5%), mean utilisation 0.479
+16:01:41 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,939.6, 6,168/6,283 requests served (98.2%), mean utilisation 0.429
+16:01:42 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,630.8, 6,807/6,972 requests served (97.6%), mean utilisation 0.477
+16:01:44 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,684.0, 6,158/6,283 requests served (98.0%), mean utilisation 0.430
+16:01:46 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,685.9, 6,794/6,972 requests served (97.4%), mean utilisation 0.476
+16:01:47 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 3,953.0, 6,158/6,283 requests served (98.0%), mean utilisation 0.427
+16:01:49 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,772.5, 6,823/6,972 requests served (97.9%), mean utilisation 0.477
+16:01:50 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,305.0, 6,146/6,283 requests served (97.8%), mean utilisation 0.424
+16:01:51 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,839.9, 6,787/6,972 requests served (97.3%), mean utilisation 0.473
+16:01:53 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,210.9, 6,168/6,283 requests served (98.2%), mean utilisation 0.427
+16:01:54 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,176.3, 6,812/6,972 requests served (97.7%), mean utilisation 0.472
+16:01:55 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,461.2, 6,158/6,283 requests served (98.0%), mean utilisation 0.422
+16:01:56 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,323.0, 6,812/6,972 requests served (97.7%), mean utilisation 0.470
+16:01:58 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,783.4, 6,179/6,283 requests served (98.3%), mean utilisation 0.420
+16:01:59 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,605.7, 6,809/6,972 requests served (97.7%), mean utilisation 0.466
+16:02:01 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 4,900.9, 6,167/6,283 requests served (98.2%), mean utilisation 0.418
+16:02:01 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11506.6, |V|>0 on 36350/104400 states
+16:02:03 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,717.0, 6,809/6,972 requests served (97.7%), mean utilisation 0.466
+16:02:06 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,319.1, 6,166/6,283 requests served (98.1%), mean utilisation 0.414
+16:02:08 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,712.0, 6,815/6,972 requests served (97.7%), mean utilisation 0.466
+16:02:11 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,181.7, 6,176/6,283 requests served (98.3%), mean utilisation 0.416
+16:02:13 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 7,200.9, 6,822/6,972 requests served (97.8%), mean utilisation 0.462
+16:02:15 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,452.9, 6,160/6,283 requests served (98.0%), mean utilisation 0.414
+16:02:16 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 7,331.6, 6,821/6,972 requests served (97.8%), mean utilisation 0.459
+16:02:18 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,546.0, 6,165/6,283 requests served (98.1%), mean utilisation 0.412
+16:02:20 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 7,388.7, 6,830/6,972 requests served (98.0%), mean utilisation 0.460
+16:02:21 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,667.9, 6,162/6,283 requests served (98.1%), mean utilisation 0.411
+16:02:22 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 7,579.4, 6,822/6,972 requests served (97.8%), mean utilisation 0.458
+16:02:24 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,967.7, 6,163/6,283 requests served (98.1%), mean utilisation 0.407
+16:02:25 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 7,836.5, 6,819/6,972 requests served (97.8%), mean utilisation 0.455
+16:02:27 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 5,911.5, 6,173/6,283 requests served (98.2%), mean utilisation 0.409
+16:02:28 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 8,121.7, 6,827/6,972 requests served (97.9%), mean utilisation 0.452
+16:02:30 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,198.7, 6,173/6,283 requests served (98.2%), mean utilisation 0.406
+16:02:31 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 8,311.5, 6,824/6,972 requests served (97.9%), mean utilisation 0.450
+16:02:32 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,397.6, 6,183/6,283 requests served (98.4%), mean utilisation 0.404
+16:02:34 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 8,304.3, 6,843/6,972 requests served (98.1%), mean utilisation 0.451
+16:02:36 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 6,458.0, 6,154/6,283 requests served (97.9%), mean utilisation 0.401
+16:02:36 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14762.3, |V|>0 on 40808/104400 states
+16:02:36 | INFO    | ltf                | training Ours (Gap 1+2) [seed1] (30 episodes over 2 scenario(s)) done in 95.4s
+16:02:38 | INFO    | ltf                | Ours (Gap 1+2) [seed1]: total utility 11,172.5, 4,906/6,689 requests served (73.3%), mean utilisation 0.314
+16:02:38 | INFO    | ltf                | drivers: 200 (80 full-time, 120 part-time) over 7 days
+16:02:38 | INFO    | ltf                |   online hours: full-time mean 46.1 (min 33.4 max 55.1), part-time mean 13.8 (min 6.1 max 21.0)
+16:02:38 | INFO    | ltf                |   hours ratio between groups: 3.34x; total online slots 64098
+16:02:38 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 61
+16:02:41 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+16:02:41 | INFO    | ltf                | calibrated sample rate 0.00431: 64098 online slots x target 0.60 / 4 slots per job = 9615 jobs, from 2231191 available requests
+16:02:43 | INFO    | ltf                | requests: 9612 over 2016 slots (rate 0.0043), 4.8 per slot, 1373 per day
+16:02:46 | INFO    | ltf                | requests: 6687 over 2016 slots (rate 0.0030), 3.3 per slot, 955 per day
+16:02:46 | INFO    | ltf                |   calibration step 1: rate 0.002996 -> offered load 0.598 (target 0.60)
+16:02:46 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 64,098, concurrent min/med/max 0/35/61
+requests: 6,687 (rate 0.00300), 3.3 per slot, offered load 0.598
+nodes: 87, utility mode 'time_aware' in distance units
+16:02:46 | INFO    | ltf                | warmup (efficiency only): total utility 11,776.1, 4,958/6,579 requests served (75.4%), mean utilisation 0.311
+16:02:46 | INFO    | ltf                | calibrated omegas: total=1.698 rate=1158 util=5.928e+04
+16:02:47 | INFO    | ltf                | drivers: 200 (80 full-time, 120 part-time) over 7 days
+16:02:47 | INFO    | ltf                |   online hours: full-time mean 46.1 (min 33.4 max 55.1), part-time mean 13.8 (min 6.1 max 21.0)
+16:02:47 | INFO    | ltf                |   hours ratio between groups: 3.34x; total online slots 64098
+16:02:47 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 61
+16:02:47 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+16:02:49 | INFO    | ltf                | requests: 6963 over 2016 slots (rate 0.0030), 3.5 per slot, 995 per day
+16:02:49 | INFO    | ltf                | sample rate pinned at 0.00300, measured offered load 0.617
+16:02:49 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 64,098, concurrent min/med/max 0/35/61
+requests: 6,963 (rate 0.00300), 3.5 per slot, offered load 0.617
+nodes: 87, utility mode 'time_aware' in distance units
+16:02:49 | INFO    | ltf                | forecaster ...
+16:02:49 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+16:02:49 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+16:02:55 | INFO    | ltf                | training forecaster on mps ...
+16:03:53 | INFO    | ltf                |   early stop at epoch 14 (val MSE 0.13066)
+16:03:53 | INFO    | ltf                | training forecaster on mps done in 57.6s
+16:04:06 | INFO    | ltf                | forecaster test: demand MSE 0.1330 (log space), 6.40 (counts); seasonal-naive 8.86 -> 27.7% better
+16:04:06 | INFO    | ltf                | forecaster test: congestion MSE 0.01362, MAE 0.0879 (on directly-measured cells)
+16:04:06 | INFO    | ltf                | forecaster done in 77.0s
+16:04:19 | INFO    | ltf                | synthetic (predicted) requests: 6313 over 2016 slots
+16:04:19 | INFO    | ltf                | training Kang et al. (totals) [seed2] (30 episodes over 2 scenario(s)) ...
+16:04:21 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,547.5, 6,631/6,856 requests served (96.7%), mean utilisation 0.497
+16:04:22 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,124.6, 6,080/6,218 requests served (97.8%), mean utilisation 0.453
+16:04:23 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,626.8, 6,633/6,856 requests served (96.7%), mean utilisation 0.495
+16:04:24 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,577.8, 6,077/6,218 requests served (97.7%), mean utilisation 0.448
+16:04:25 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,960.0, 6,607/6,856 requests served (96.4%), mean utilisation 0.489
+16:04:27 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,691.5, 6,052/6,218 requests served (97.3%), mean utilisation 0.445
+16:04:29 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,170.0, 6,643/6,856 requests served (96.9%), mean utilisation 0.491
+16:04:31 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,692.6, 6,071/6,218 requests served (97.6%), mean utilisation 0.446
+16:04:32 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,243.0, 6,637/6,856 requests served (96.8%), mean utilisation 0.488
+16:04:34 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 2,826.4, 6,071/6,218 requests served (97.6%), mean utilisation 0.445
+16:04:35 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,462.1, 6,625/6,856 requests served (96.6%), mean utilisation 0.486
+16:04:37 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,169.2, 6,066/6,218 requests served (97.6%), mean utilisation 0.441
+16:04:38 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,869.7, 6,652/6,856 requests served (97.0%), mean utilisation 0.483
+16:04:40 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,222.5, 6,071/6,218 requests served (97.6%), mean utilisation 0.441
+16:04:42 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,833.3, 6,661/6,856 requests served (97.2%), mean utilisation 0.484
+16:04:44 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,517.5, 6,078/6,218 requests served (97.7%), mean utilisation 0.439
+16:04:46 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,989.4, 6,674/6,856 requests served (97.3%), mean utilisation 0.484
+16:04:48 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,392.0, 6,086/6,218 requests served (97.9%), mean utilisation 0.440
+16:04:50 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,246.0, 6,641/6,856 requests served (96.9%), mean utilisation 0.479
+16:04:52 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,926.5, 6,080/6,218 requests served (97.8%), mean utilisation 0.435
+16:04:52 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 8172.4, |V|>0 on 27877/104400 states
+16:04:54 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,490.4, 6,627/6,856 requests served (96.7%), mean utilisation 0.475
+16:04:55 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 3,954.0, 6,068/6,218 requests served (97.6%), mean utilisation 0.432
+16:04:57 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,642.0, 6,661/6,856 requests served (97.2%), mean utilisation 0.478
+16:04:58 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,127.5, 6,081/6,218 requests served (97.8%), mean utilisation 0.432
+16:05:00 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,719.7, 6,635/6,856 requests served (96.8%), mean utilisation 0.474
+16:05:01 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,467.9, 6,097/6,218 requests served (98.1%), mean utilisation 0.429
+16:05:02 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,008.0, 6,670/6,856 requests served (97.3%), mean utilisation 0.473
+16:05:04 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,437.0, 6,079/6,218 requests served (97.8%), mean utilisation 0.429
+16:05:05 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,386.9, 6,653/6,856 requests served (97.0%), mean utilisation 0.468
+16:05:07 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,594.8, 6,071/6,218 requests served (97.6%), mean utilisation 0.426
+16:05:08 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,303.1, 6,646/6,856 requests served (96.9%), mean utilisation 0.468
+16:05:09 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 4,888.4, 6,073/6,218 requests served (97.7%), mean utilisation 0.424
+16:05:10 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,655.9, 6,659/6,856 requests served (97.1%), mean utilisation 0.465
+16:05:11 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,025.4, 6,096/6,218 requests served (98.0%), mean utilisation 0.423
+16:05:13 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,525.7, 6,623/6,856 requests served (96.6%), mean utilisation 0.464
+16:05:14 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,113.9, 6,084/6,218 requests served (97.8%), mean utilisation 0.422
+16:05:15 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,901.0, 6,665/6,856 requests served (97.2%), mean utilisation 0.465
+16:05:16 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,256.2, 6,078/6,218 requests served (97.7%), mean utilisation 0.420
+16:05:17 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,157.9, 6,675/6,856 requests served (97.4%), mean utilisation 0.462
+16:05:19 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,563.7, 6,101/6,218 requests served (98.1%), mean utilisation 0.419
+16:05:19 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11721.6, |V|>0 on 34753/104400 states
+16:05:20 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,202.8, 6,654/6,856 requests served (97.1%), mean utilisation 0.459
+16:05:21 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,724.0, 6,086/6,218 requests served (97.9%), mean utilisation 0.416
+16:05:22 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,386.1, 6,631/6,856 requests served (96.7%), mean utilisation 0.457
+16:05:23 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,863.8, 6,074/6,218 requests served (97.7%), mean utilisation 0.414
+16:05:24 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,731.0, 6,677/6,856 requests served (97.4%), mean utilisation 0.456
+16:05:25 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 5,899.4, 6,087/6,218 requests served (97.9%), mean utilisation 0.414
+16:05:26 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,820.2, 6,666/6,856 requests served (97.2%), mean utilisation 0.455
+16:05:27 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,099.3, 6,092/6,218 requests served (98.0%), mean utilisation 0.413
+16:05:28 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,921.8, 6,654/6,856 requests served (97.1%), mean utilisation 0.452
+16:05:29 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,245.9, 6,075/6,218 requests served (97.7%), mean utilisation 0.409
+16:05:30 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 7,168.1, 6,656/6,856 requests served (97.1%), mean utilisation 0.450
+16:05:31 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,461.4, 6,104/6,218 requests served (98.2%), mean utilisation 0.408
+16:05:31 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 7,472.8, 6,674/6,856 requests served (97.3%), mean utilisation 0.447
+16:05:32 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,763.7, 6,100/6,218 requests served (98.1%), mean utilisation 0.406
+16:05:33 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 7,521.3, 6,645/6,856 requests served (96.9%), mean utilisation 0.446
+16:05:34 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,832.1, 6,098/6,218 requests served (98.1%), mean utilisation 0.405
+16:05:35 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 7,627.6, 6,680/6,856 requests served (97.4%), mean utilisation 0.446
+16:05:36 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 6,974.8, 6,101/6,218 requests served (98.1%), mean utilisation 0.404
+16:05:37 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 8,062.8, 6,668/6,856 requests served (97.3%), mean utilisation 0.441
+16:05:38 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 7,199.0, 6,102/6,218 requests served (98.1%), mean utilisation 0.401
+16:05:38 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 15261.7, |V|>0 on 38785/104400 states
+16:05:38 | INFO    | ltf                | training Kang et al. (totals) [seed2] (30 episodes over 2 scenario(s)) done in 78.4s
+16:05:38 | INFO    | ltf                | Kang et al. (totals) [seed2]: total utility 10,848.5, 5,043/6,579 requests served (76.7%), mean utilisation 0.325
+16:05:39 | INFO    | ltf                | training Ours (Gap 1+2) [seed2] (30 episodes over 2 scenario(s)) ...
+16:05:40 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,465.4, 6,632/6,856 requests served (96.7%), mean utilisation 0.497
+16:05:41 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,156.7, 6,071/6,218 requests served (97.6%), mean utilisation 0.452
+16:05:42 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,940.5, 6,635/6,856 requests served (96.8%), mean utilisation 0.493
+16:05:43 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,371.9, 6,064/6,218 requests served (97.5%), mean utilisation 0.448
+16:05:45 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,857.0, 6,626/6,856 requests served (96.6%), mean utilisation 0.491
+16:05:46 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,609.9, 6,068/6,218 requests served (97.6%), mean utilisation 0.446
+16:05:47 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,094.8, 6,648/6,856 requests served (97.0%), mean utilisation 0.491
+16:05:48 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,807.6, 6,073/6,218 requests served (97.7%), mean utilisation 0.445
+16:05:49 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,429.2, 6,626/6,856 requests served (96.6%), mean utilisation 0.486
+16:05:50 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,854.8, 6,074/6,218 requests served (97.7%), mean utilisation 0.446
+16:05:52 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,276.2, 6,638/6,856 requests served (96.8%), mean utilisation 0.488
+16:05:53 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,116.1, 6,085/6,218 requests served (97.9%), mean utilisation 0.443
+16:05:54 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,419.6, 6,640/6,856 requests served (96.8%), mean utilisation 0.486
+16:05:55 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 2,995.8, 6,094/6,218 requests served (98.0%), mean utilisation 0.445
+16:05:56 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,812.7, 6,632/6,856 requests served (96.7%), mean utilisation 0.483
+16:05:58 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,462.0, 6,059/6,218 requests served (97.4%), mean utilisation 0.437
+16:06:00 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,900.2, 6,665/6,856 requests served (97.2%), mean utilisation 0.484
+16:06:01 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,521.3, 6,059/6,218 requests served (97.4%), mean utilisation 0.437
+16:06:02 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,999.1, 6,650/6,856 requests served (97.0%), mean utilisation 0.482
+16:06:03 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,737.6, 6,077/6,218 requests served (97.7%), mean utilisation 0.436
+16:06:03 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7736.7, |V|>0 on 27265/104400 states
+16:06:05 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,218.2, 6,626/6,856 requests served (96.6%), mean utilisation 0.478
+16:06:06 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 3,966.0, 6,080/6,218 requests served (97.8%), mean utilisation 0.433
+16:06:07 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,604.1, 6,638/6,856 requests served (96.8%), mean utilisation 0.476
+16:06:08 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,023.4, 6,078/6,218 requests served (97.7%), mean utilisation 0.433
+16:06:09 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,953.2, 6,669/6,856 requests served (97.3%), mean utilisation 0.474
+16:06:11 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,478.1, 6,077/6,218 requests served (97.7%), mean utilisation 0.428
+16:06:12 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,851.8, 6,646/6,856 requests served (96.9%), mean utilisation 0.472
+16:06:14 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,216.4, 6,087/6,218 requests served (97.9%), mean utilisation 0.431
+16:06:15 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,018.6, 6,661/6,856 requests served (97.2%), mean utilisation 0.473
+16:06:16 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,549.8, 6,075/6,218 requests served (97.7%), mean utilisation 0.429
+16:06:18 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,303.6, 6,662/6,856 requests served (97.2%), mean utilisation 0.469
+16:06:19 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,755.7, 6,082/6,218 requests served (97.8%), mean utilisation 0.425
+16:06:20 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,394.4, 6,642/6,856 requests served (96.9%), mean utilisation 0.469
+16:06:21 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,839.5, 6,082/6,218 requests served (97.8%), mean utilisation 0.425
+16:06:23 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,583.6, 6,661/6,856 requests served (97.2%), mean utilisation 0.467
+16:06:24 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 4,919.0, 6,064/6,218 requests served (97.5%), mean utilisation 0.423
+16:06:25 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,828.7, 6,645/6,856 requests served (96.9%), mean utilisation 0.463
+16:06:26 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,274.2, 6,097/6,218 requests served (98.1%), mean utilisation 0.421
+16:06:28 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,144.5, 6,663/6,856 requests served (97.2%), mean utilisation 0.461
+16:06:29 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,547.4, 6,082/6,218 requests served (97.8%), mean utilisation 0.418
+16:06:29 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11691.9, |V|>0 on 34401/104400 states
+16:06:30 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,103.6, 6,653/6,856 requests served (97.0%), mean utilisation 0.460
+16:06:32 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,473.3, 6,093/6,218 requests served (98.0%), mean utilisation 0.420
+16:06:33 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,338.1, 6,673/6,856 requests served (97.3%), mean utilisation 0.460
+16:06:34 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,672.7, 6,115/6,218 requests served (98.3%), mean utilisation 0.418
+16:06:35 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,395.1, 6,679/6,856 requests served (97.4%), mean utilisation 0.460
+16:06:37 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 5,889.0, 6,098/6,218 requests served (98.1%), mean utilisation 0.416
+16:06:38 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,697.5, 6,628/6,856 requests served (96.7%), mean utilisation 0.453
+16:06:39 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,079.8, 6,092/6,218 requests served (98.0%), mean utilisation 0.412
+16:06:40 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 7,092.7, 6,657/6,856 requests served (97.1%), mean utilisation 0.451
+16:06:41 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,165.2, 6,087/6,218 requests served (97.9%), mean utilisation 0.411
+16:06:43 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,966.2, 6,655/6,856 requests served (97.1%), mean utilisation 0.453
+16:06:44 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,315.3, 6,085/6,218 requests served (97.9%), mean utilisation 0.409
+16:06:45 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 7,235.0, 6,657/6,856 requests served (97.1%), mean utilisation 0.448
+16:06:46 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,605.2, 6,096/6,218 requests served (98.0%), mean utilisation 0.407
+16:06:47 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 7,320.0, 6,672/6,856 requests served (97.3%), mean utilisation 0.449
+16:06:48 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,856.8, 6,100/6,218 requests served (98.1%), mean utilisation 0.405
+16:06:50 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 7,365.7, 6,642/6,856 requests served (96.9%), mean utilisation 0.446
+16:06:51 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,965.2, 6,109/6,218 requests served (98.2%), mean utilisation 0.404
+16:06:52 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 7,850.9, 6,691/6,856 requests served (97.6%), mean utilisation 0.445
+16:06:53 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 6,983.4, 6,085/6,218 requests served (97.9%), mean utilisation 0.402
+16:06:53 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14834.3, |V|>0 on 38493/104400 states
+16:06:53 | INFO    | ltf                | training Ours (Gap 1+2) [seed2] (30 episodes over 2 scenario(s)) done in 74.2s
+16:06:54 | INFO    | ltf                | Ours (Gap 1+2) [seed2]: total utility 10,679.5, 4,877/6,579 requests served (74.1%), mean utilisation 0.316
+16:06:54 | INFO    | ltf                | drivers: 200 (78 full-time, 122 part-time) over 7 days
+16:06:54 | INFO    | ltf                |   online hours: full-time mean 46.8 (min 37.5 max 55.0), part-time mean 13.6 (min 4.8 max 20.0)
+16:06:54 | INFO    | ltf                |   hours ratio between groups: 3.45x; total online slots 63714
+16:06:54 | INFO    | ltf                |   concurrent online drivers: min 0, median 33, max 65
+16:06:59 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+16:06:59 | INFO    | ltf                | calibrated sample rate 0.00428: 63714 online slots x target 0.60 / 4 slots per job = 9557 jobs, from 2231191 available requests
+16:07:00 | INFO    | ltf                | requests: 9557 over 2016 slots (rate 0.0043), 4.7 per slot, 1365 per day
+16:07:01 | INFO    | ltf                | requests: 6674 over 2016 slots (rate 0.0030), 3.3 per slot, 953 per day
+16:07:01 | INFO    | ltf                |   calibration step 1: rate 0.002991 -> offered load 0.602 (target 0.60)
+16:07:01 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,714, concurrent min/med/max 0/33/65
+requests: 6,674 (rate 0.00299), 3.3 per slot, offered load 0.602
+nodes: 87, utility mode 'time_aware' in distance units
+16:07:02 | INFO    | ltf                | warmup (efficiency only): total utility 11,521.8, 4,826/6,566 requests served (73.5%), mean utilisation 0.307
+16:07:02 | INFO    | ltf                | calibrated omegas: total=1.736 rate=1209 util=6.179e+04
+16:07:02 | INFO    | ltf                | drivers: 200 (78 full-time, 122 part-time) over 7 days
+16:07:02 | INFO    | ltf                |   online hours: full-time mean 46.8 (min 37.5 max 55.0), part-time mean 13.6 (min 4.8 max 20.0)
+16:07:02 | INFO    | ltf                |   hours ratio between groups: 3.45x; total online slots 63714
+16:07:02 | INFO    | ltf                |   concurrent online drivers: min 0, median 33, max 65
+16:07:03 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+16:07:04 | INFO    | ltf                | requests: 6949 over 2016 slots (rate 0.0030), 3.4 per slot, 993 per day
+16:07:04 | INFO    | ltf                | sample rate pinned at 0.00299, measured offered load 0.626
+16:07:04 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,714, concurrent min/med/max 0/33/65
+requests: 6,949 (rate 0.00299), 3.4 per slot, offered load 0.626
+nodes: 87, utility mode 'time_aware' in distance units
+16:07:04 | INFO    | ltf                | forecaster ...
+16:07:04 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+16:07:04 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+16:07:09 | INFO    | ltf                | training forecaster on mps ...
+16:09:30 | INFO    | ltf                |   early stop at epoch 48 (val MSE 0.12978)
+16:09:30 | INFO    | ltf                | training forecaster on mps done in 140.9s
+16:09:44 | INFO    | ltf                | forecaster test: demand MSE 0.1376 (log space), 6.40 (counts); seasonal-naive 8.86 -> 27.8% better
+16:09:44 | INFO    | ltf                | forecaster test: congestion MSE 0.01222, MAE 0.0837 (on directly-measured cells)
+16:09:44 | INFO    | ltf                | forecaster done in 159.9s
+16:09:59 | INFO    | ltf                | synthetic (predicted) requests: 6387 over 2016 slots
+16:09:59 | INFO    | ltf                | training Kang et al. (totals) [seed3] (30 episodes over 2 scenario(s)) ...
+16:10:02 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,370.7, 6,599/6,844 requests served (96.4%), mean utilisation 0.495
+16:10:04 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 1,857.8, 6,063/6,289 requests served (96.4%), mean utilisation 0.450
+16:10:05 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,161.9, 6,582/6,844 requests served (96.2%), mean utilisation 0.495
+16:10:06 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 1,981.0, 6,060/6,289 requests served (96.4%), mean utilisation 0.449
+16:10:07 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,642.6, 6,591/6,844 requests served (96.3%), mean utilisation 0.493
+16:10:08 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,131.5, 6,067/6,289 requests served (96.5%), mean utilisation 0.448
+16:10:09 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,831.4, 6,606/6,844 requests served (96.5%), mean utilisation 0.491
+16:10:11 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,259.3, 6,048/6,289 requests served (96.2%), mean utilisation 0.444
+16:10:12 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,007.8, 6,575/6,844 requests served (96.1%), mean utilisation 0.487
+16:10:13 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,477.6, 6,058/6,289 requests served (96.3%), mean utilisation 0.444
+16:10:14 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,237.8, 6,580/6,844 requests served (96.1%), mean utilisation 0.486
+16:10:16 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,552.4, 6,039/6,289 requests served (96.0%), mean utilisation 0.442
+16:10:18 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,416.9, 6,593/6,844 requests served (96.3%), mean utilisation 0.484
+16:10:20 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,634.6, 6,071/6,289 requests served (96.5%), mean utilisation 0.443
+16:10:22 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,397.4, 6,589/6,844 requests served (96.3%), mean utilisation 0.484
+16:10:22 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 2,903.2, 6,061/6,289 requests served (96.4%), mean utilisation 0.441
+16:10:23 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,639.5, 6,612/6,844 requests served (96.6%), mean utilisation 0.483
+16:10:24 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,295.9, 6,078/6,289 requests served (96.6%), mean utilisation 0.436
+16:10:26 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,676.7, 6,608/6,844 requests served (96.6%), mean utilisation 0.482
+16:10:28 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,094.0, 6,066/6,289 requests served (96.5%), mean utilisation 0.439
+16:10:28 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 6770.7, |V|>0 on 28162/104400 states
+16:10:29 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,056.9, 6,611/6,844 requests served (96.6%), mean utilisation 0.478
+16:10:31 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,335.3, 6,066/6,289 requests served (96.5%), mean utilisation 0.436
+16:10:33 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,222.6, 6,606/6,844 requests served (96.5%), mean utilisation 0.478
+16:10:34 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,524.8, 6,057/6,289 requests served (96.3%), mean utilisation 0.433
+16:10:36 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,440.8, 6,583/6,844 requests served (96.2%), mean utilisation 0.473
+16:10:38 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,774.3, 6,058/6,289 requests served (96.3%), mean utilisation 0.431
+16:10:40 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,955.4, 6,615/6,844 requests served (96.7%), mean utilisation 0.471
+16:10:42 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 3,946.2, 6,082/6,289 requests served (96.7%), mean utilisation 0.430
+16:10:44 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,862.7, 6,638/6,844 requests served (97.0%), mean utilisation 0.474
+16:10:45 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,257.7, 6,080/6,289 requests served (96.7%), mean utilisation 0.428
+16:10:47 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,898.1, 6,589/6,844 requests served (96.3%), mean utilisation 0.470
+16:10:48 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,253.6, 6,081/6,289 requests served (96.7%), mean utilisation 0.427
+16:10:49 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,210.7, 6,588/6,844 requests served (96.3%), mean utilisation 0.466
+16:10:51 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,368.4, 6,075/6,289 requests served (96.6%), mean utilisation 0.425
+16:10:52 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,424.8, 6,599/6,844 requests served (96.4%), mean utilisation 0.464
+16:10:53 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,643.5, 6,053/6,289 requests served (96.2%), mean utilisation 0.422
+16:10:54 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,591.0, 6,606/6,844 requests served (96.5%), mean utilisation 0.464
+16:10:55 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,796.7, 6,066/6,289 requests served (96.5%), mean utilisation 0.420
+16:10:57 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,602.1, 6,611/6,844 requests served (96.6%), mean utilisation 0.463
+16:10:58 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,038.8, 6,059/6,289 requests served (96.3%), mean utilisation 0.417
+16:10:58 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 10640.9, |V|>0 on 35147/104400 states
+16:10:59 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,924.0, 6,628/6,844 requests served (96.8%), mean utilisation 0.460
+16:11:00 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 4,906.1, 6,066/6,289 requests served (96.5%), mean utilisation 0.419
+16:11:01 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,095.1, 6,611/6,844 requests served (96.6%), mean utilisation 0.459
+16:11:02 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,238.1, 6,057/6,289 requests served (96.3%), mean utilisation 0.414
+16:11:03 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,353.0, 6,620/6,844 requests served (96.7%), mean utilisation 0.456
+16:11:04 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,396.1, 6,104/6,289 requests served (97.1%), mean utilisation 0.417
+16:11:05 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,345.6, 6,602/6,844 requests served (96.5%), mean utilisation 0.456
+16:11:06 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,586.1, 6,076/6,289 requests served (96.6%), mean utilisation 0.413
+16:11:07 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,560.4, 6,629/6,844 requests served (96.9%), mean utilisation 0.455
+16:11:08 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,853.3, 6,074/6,289 requests served (96.6%), mean utilisation 0.409
+16:11:09 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,881.7, 6,614/6,844 requests served (96.6%), mean utilisation 0.450
+16:11:10 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 5,899.2, 6,087/6,289 requests served (96.8%), mean utilisation 0.410
+16:11:12 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,991.3, 6,632/6,844 requests served (96.9%), mean utilisation 0.450
+16:11:13 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,153.1, 6,096/6,289 requests served (96.9%), mean utilisation 0.408
+16:11:14 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 7,162.3, 6,612/6,844 requests served (96.6%), mean utilisation 0.447
+16:11:16 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,170.3, 6,066/6,289 requests served (96.5%), mean utilisation 0.405
+16:11:18 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 7,382.0, 6,613/6,844 requests served (96.6%), mean utilisation 0.446
+16:11:19 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,160.4, 6,073/6,289 requests served (96.6%), mean utilisation 0.406
+16:11:22 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 7,637.6, 6,625/6,844 requests served (96.8%), mean utilisation 0.443
+16:11:23 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 6,729.0, 6,095/6,289 requests served (96.9%), mean utilisation 0.401
+16:11:23 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14366.6, |V|>0 on 39186/104400 states
+16:11:23 | INFO    | ltf                | training Kang et al. (totals) [seed3] (30 episodes over 2 scenario(s)) done in 83.7s
+16:11:24 | INFO    | ltf                | Kang et al. (totals) [seed3]: total utility 10,319.3, 4,847/6,566 requests served (73.8%), mean utilisation 0.319
+16:11:24 | INFO    | ltf                | training Ours (Gap 1+2) [seed3] (30 episodes over 2 scenario(s)) ...
+16:11:26 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,256.6, 6,590/6,844 requests served (96.3%), mean utilisation 0.496
+16:11:27 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 1,670.9, 6,046/6,289 requests served (96.1%), mean utilisation 0.451
+16:11:28 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,388.5, 6,590/6,844 requests served (96.3%), mean utilisation 0.495
+16:11:29 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 1,773.9, 6,055/6,289 requests served (96.3%), mean utilisation 0.450
+16:11:31 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,579.0, 6,599/6,844 requests served (96.4%), mean utilisation 0.493
+16:11:32 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 1,901.9, 6,028/6,289 requests served (95.8%), mean utilisation 0.447
+16:11:34 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,717.6, 6,603/6,844 requests served (96.5%), mean utilisation 0.491
+16:11:35 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,090.5, 6,052/6,289 requests served (96.2%), mean utilisation 0.448
+16:11:37 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,086.9, 6,598/6,844 requests served (96.4%), mean utilisation 0.488
+16:11:38 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,303.3, 6,059/6,289 requests served (96.3%), mean utilisation 0.446
+16:11:39 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,949.4, 6,597/6,844 requests served (96.4%), mean utilisation 0.488
+16:11:41 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,445.0, 6,056/6,289 requests served (96.3%), mean utilisation 0.443
+16:11:42 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,349.9, 6,610/6,844 requests served (96.6%), mean utilisation 0.486
+16:11:44 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,533.9, 6,079/6,289 requests served (96.7%), mean utilisation 0.444
+16:11:45 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,365.6, 6,599/6,844 requests served (96.4%), mean utilisation 0.486
+16:11:47 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 2,810.2, 6,060/6,289 requests served (96.4%), mean utilisation 0.440
+16:11:48 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,657.6, 6,595/6,844 requests served (96.4%), mean utilisation 0.483
+16:11:49 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,227.0, 6,060/6,289 requests served (96.4%), mean utilisation 0.437
+16:11:51 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,776.8, 6,575/6,844 requests served (96.1%), mean utilisation 0.480
+16:11:52 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,181.0, 6,056/6,289 requests served (96.3%), mean utilisation 0.436
+16:11:52 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 6957.9, |V|>0 on 27274/104400 states
+16:11:53 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,252.6, 6,615/6,844 requests served (96.7%), mean utilisation 0.478
+16:11:55 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,312.8, 6,054/6,289 requests served (96.3%), mean utilisation 0.437
+16:11:56 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,916.9, 6,577/6,844 requests served (96.1%), mean utilisation 0.478
+16:11:57 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,217.5, 6,056/6,289 requests served (96.3%), mean utilisation 0.435
+16:11:59 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,376.4, 6,617/6,844 requests served (96.7%), mean utilisation 0.476
+16:12:00 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,645.5, 6,072/6,289 requests served (96.5%), mean utilisation 0.433
+16:12:01 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,601.0, 6,593/6,844 requests served (96.3%), mean utilisation 0.473
+16:12:02 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 3,846.1, 6,071/6,289 requests served (96.5%), mean utilisation 0.431
+16:12:04 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,774.6, 6,596/6,844 requests served (96.4%), mean utilisation 0.470
+16:12:06 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,030.4, 6,054/6,289 requests served (96.3%), mean utilisation 0.426
+16:12:07 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,972.4, 6,604/6,844 requests served (96.5%), mean utilisation 0.471
+16:12:08 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,230.1, 6,076/6,289 requests served (96.6%), mean utilisation 0.427
+16:12:10 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,091.2, 6,602/6,844 requests served (96.5%), mean utilisation 0.468
+16:12:12 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,301.0, 6,051/6,289 requests served (96.2%), mean utilisation 0.424
+16:12:14 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,389.4, 6,596/6,844 requests served (96.4%), mean utilisation 0.464
+16:12:16 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,435.3, 6,068/6,289 requests served (96.5%), mean utilisation 0.424
+16:12:19 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,575.5, 6,612/6,844 requests served (96.6%), mean utilisation 0.463
+16:12:20 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,650.4, 6,062/6,289 requests served (96.4%), mean utilisation 0.421
+16:12:22 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,569.6, 6,634/6,844 requests served (96.9%), mean utilisation 0.466
+16:12:23 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 4,736.7, 6,081/6,289 requests served (96.7%), mean utilisation 0.422
+16:12:23 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 10306.3, |V|>0 on 34030/104400 states
+16:12:24 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,849.6, 6,629/6,844 requests served (96.9%), mean utilisation 0.462
+16:12:26 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,057.0, 6,087/6,289 requests served (96.8%), mean utilisation 0.419
+16:12:27 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,794.6, 6,606/6,844 requests served (96.5%), mean utilisation 0.461
+16:12:28 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,137.2, 6,057/6,289 requests served (96.3%), mean utilisation 0.416
+16:12:30 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,191.6, 6,609/6,844 requests served (96.6%), mean utilisation 0.458
+16:12:31 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,289.5, 6,073/6,289 requests served (96.6%), mean utilisation 0.416
+16:12:32 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,278.4, 6,611/6,844 requests served (96.6%), mean utilisation 0.456
+16:12:33 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,509.1, 6,067/6,289 requests served (96.5%), mean utilisation 0.413
+16:12:35 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,520.5, 6,624/6,844 requests served (96.8%), mean utilisation 0.454
+16:12:36 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,697.3, 6,085/6,289 requests served (96.8%), mean utilisation 0.412
+16:12:38 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,765.8, 6,602/6,844 requests served (96.5%), mean utilisation 0.450
+16:12:39 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 5,607.1, 6,073/6,289 requests served (96.6%), mean utilisation 0.413
+16:12:41 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,916.7, 6,640/6,844 requests served (97.0%), mean utilisation 0.452
+16:12:43 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,000.9, 6,091/6,289 requests served (96.9%), mean utilisation 0.410
+16:12:44 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 7,049.6, 6,619/6,844 requests served (96.7%), mean utilisation 0.449
+16:12:45 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,357.6, 6,079/6,289 requests served (96.7%), mean utilisation 0.404
+16:12:47 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 7,162.6, 6,619/6,844 requests served (96.7%), mean utilisation 0.447
+16:12:48 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,100.4, 6,082/6,289 requests served (96.7%), mean utilisation 0.406
+16:12:50 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 7,398.5, 6,635/6,844 requests served (96.9%), mean utilisation 0.445
+16:12:51 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 6,535.4, 6,078/6,289 requests served (96.6%), mean utilisation 0.403
+16:12:51 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 13933.8, |V|>0 on 38079/104400 states
+16:12:51 | INFO    | ltf                | training Ours (Gap 1+2) [seed3] (30 episodes over 2 scenario(s)) done in 87.0s
+16:12:52 | INFO    | ltf                | Ours (Gap 1+2) [seed3]: total utility 10,327.1, 4,660/6,566 requests served (71.0%), mean utilisation 0.308
+
+====================================================================================================
+per-seed results
+====================================================================================================
+                      method variant  total_utility  fairness_total_var  rate_var  rate_var_between  rate_full_time  rate_part_time  rate_group_ratio  util_var  util_adj_var  n_idle_drivers  service_rate
+Kang et al. (totals) [seed1]   seed1   11380.809932          536.752951  1.984194          0.497493        1.726875        3.160963          1.830452  0.014709      0.442606               0      0.759904
+      Ours (Gap 1+2) [seed1]   seed1   11172.536532         1403.770973  0.280163          0.000722        2.068673        2.014057          0.973599  0.006780      0.160463               0      0.733443
+Kang et al. (totals) [seed2]   seed2   10848.455950          594.494464  1.764649          0.474063        1.642350        3.047791          1.855749  0.016342      0.212185               0      0.766530
+      Ours (Gap 1+2) [seed2]   seed2   10679.546277         1465.094501  0.381781          0.001026        2.013701        1.948317          0.967531  0.007294      0.114473               0      0.741298
+Kang et al. (totals) [seed3]   seed3   10319.308147          655.212471  1.694029          0.409148        1.582020        2.893443          1.828955  0.017537      0.261881               4      0.738197
+      Ours (Gap 1+2) [seed3]   seed3   10327.078621         1626.237461  0.549519          0.001955        1.974410        1.883770          0.954092  0.008864      0.137450               4      0.709717
+
+  across seeds (mean, sd):
+             utility  rate_var  rate_var_sd   between  between_sd     ratio  ratio_sd  util_adj      idle
+family                                                                                                   
+Kang    10849.524676  1.814291     0.151318  0.460235    0.045767  1.838385  0.015056  0.305558  1.333333
+Ours    10726.387143  0.403821     0.136024  0.001234    0.000642  0.965074  0.009982  0.137462  1.333333
+
+wrote outputs/robustness.csv

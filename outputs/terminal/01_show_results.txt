@@ -1,0 +1,188 @@
+
+====================================================================================================
+LONG-TERM FAIRNESS IN RIDE-HAILING  --  GAP IMPLEMENTATION RESULTS
+====================================================================================================
+Base paper : Kang, Chan, Shao, Salim, Leckie, ECML PKDD 2024 (arXiv:2407.17839)
+Dataset    : NYC yellow taxi, March 2016 (12,210,952 -> 10,300,738 trips)
+Setup      : 87 graph nodes, 200 simulated drivers (76 full-time / 124 part-time),
+             7-day horizon 25-31 Mar, 5-minute decision epochs, offered load 0.60
+
+====================================================================================================
+STEP 1  WHY THE PAPER'S UTILITY IS WRONG  (Gap 1a, measured)
+====================================================================================================
+The paper flattens travel time to a period mean (Sec. 5.1), making a trip
+worth the same at 04:00 and 18:00. Measured on its own dataset:
+  citywide speed        28.5 km/h at 04:00  vs  12.8 km/h at 12:00 = 2.22x
+  same OD pair, peak/off-peak travel time   median 2.11x, max 4.35x
+  utility sign flips on 10.2% of (driver, request, time) triples
+     -> the paper calls 1 request in 10 profitable when it is not
+
+====================================================================================================
+STEP 2  WHY THE PAPER'S FAIRNESS METRIC IS BLIND  (Gap 1b, measured)
+====================================================================================================
+Paper Eq. 2 is Var(weekly TOTAL utility), which ignores hours worked.
+On this fleet, equalising totals (what Eq. 2 drives towards) gives:
+  Var(total earnings) = 0.0        -> 'perfectly fair'
+  Var(hourly rate)    = 7,859      -> rates span 47.9 to 375.7 = 7.8x gap
+  by group: full-time 57.3/h  vs  part-time 205.6/h = 3.59x
+
+====================================================================================================
+TABLE 1  THE PAPER'S OWN METRICS  (utility in km-equivalent units)
+====================================================================================================
+Method                       TotalUtil   Var(total)  NormFair      Min     Mean      Max
+Greedy                          11,708          701    0.4522     0.00    58.54   118.87
+REASSIGN                        11,437          869    0.5156     0.00    57.19   126.13
+LAF                             11,704          635    0.4305     0.00    58.52   121.08
+Balance Ride-Pooling            10,373          671    0.4996    -1.11    51.86   107.94
+Kang et al. (reproduced)        10,221          657    0.5016     0.00    51.11   108.96
+Ours (Gap 1+2)                  10,145        1,639    0.7982     0.37    50.72   172.10
+
+Note: our Var(total) is deliberately WORSE. Equal hourly rates across
+unequal hours mathematically implies unequal totals. Eq. 2 and rate
+fairness cannot both be satisfied -- that is the central finding.
+
+====================================================================================================
+TABLE 1b  THE GAP METRICS  (same runs)
+====================================================================================================
+Method                     rate_var   within  between  FT/hr  PT/hr  ratio util_var  utiladj  idle
+Greedy                        1.809    1.279    0.530   1.78   3.28   1.84   0.0202   0.4262     1
+REASSIGN                      1.439    1.133    0.306   1.83   2.97   1.62   0.0214   0.4012     2
+LAF                           1.641    1.044    0.597   1.75   3.34   1.91   0.0216   0.4390     1
+Balance Ride-Pooling          1.238    0.986    0.252   1.66   2.69   1.62   0.0140   0.2747     0
+Kang et al. (reproduced)      1.251    1.004    0.247   1.64   2.67   1.62   0.0129   0.2527     1
+Ours (Gap 1+2)                0.446    0.445    0.001   1.93   1.86   0.97   0.0081   0.1550     0
+
+ratio = part-time hourly rate / full-time hourly rate. 1.00 = parity.
+EVERY prior method sits at 1.62-1.91: part-timers earn 62-91% more per
+hour. This is systematic, not noise -- all five optimise Var(totals).
+
+====================================================================================================
+HEADLINE  OURS vs THE REPRODUCED PAPER METHOD
+====================================================================================================
+Metric                                  Paper         Ours    Change   note
+Total utility (Eq. 1)             10,221.3384  10,144.8353     -0.7%   higher better
+Var(hourly rate)  [Gap 1b]             1.2509       0.4456    -64.4%   lower better
+  within-group                         1.0036       0.4445    -55.7%   lower better
+  between-group                        0.2473       0.0011    -99.6%   lower better
+Group ratio (parity=1.0)               1.6243       0.9652    -40.6%   -> 1.0
+Full-time rate /h                      1.6412       1.9265    +17.4%   -
+Part-time rate /h                      2.6658       1.8595    -30.2%   -
+Var(utilisation)  [Gap 2]              0.0129       0.0081    -37.7%   lower better
+Var(util, normalised) [Gap 2]          0.2527       0.1550    -38.6%   lower better
+Idle drivers (all week)                1.0000       0.0000   -100.0%   lower better
+Gini(hourly rate)                      0.2583       0.1977    -23.4%   lower better
+
+Cost of the gains: total utility -0.7%
+Gains: rate fairness -64.4%, group inequity -99.6%, idle drivers 1 -> 0
+
+====================================================================================================
+TABLE 2  ABLATIONS  (each row removes one component)
+====================================================================================================
+Configuration                    TotalUtil  rate_var   between  util_var  utiladj  idle
+Ours, static utility (c=1)          10,049     0.252    0.0023    0.0069   0.1332     2
+Ours, w/o fairness                  11,365     1.284    0.0062    0.0147   0.2484     4
+Ours, w/o prediction                10,290     0.406    0.0012    0.0072   0.1246     0
+Ours, w/o utilisation term          10,191     0.426    0.0005    0.0123   0.2224     0
+Kang et al. (reproduced)            10,221     1.251    0.2473    0.0129   0.2527     1
+Ours (Gap 1+2)                      10,145     0.446    0.0011    0.0081   0.1550     0
+
+Gap 2 term is doing real work: removing it moves Var(utilisation)
+  0.0081 -> 0.0123 (+52.3% worse) and the normalised form
+  0.1550 -> 0.2224.
+
+====================================================================================================
+WEIGHT SWEEP  20 configurations, BOTH gaps active in every one
+====================================================================================================
+Driving the fleet to group parity via lambda_between:
+   lambda_between   PT/FT ratio   between-Var   TotalUtil
+             0.25         0.614       0.20057      11,011
+             0.50         0.693       0.11920      10,971
+             1.00         0.761       0.06853      10,954
+             2.00         0.837       0.02991      10,971
+             4.00         0.900       0.01071      10,901
+             8.00         0.945       0.00315      10,964
+            16.00         0.955       0.00207      10,883
+          (paper)         1.624       0.24733      10,221
+
+12 of 20 configurations beat the paper method on ALL
+six metrics simultaneously (utility, rate_var, between-group,
+Var(util), normalised Var(util), idle drivers). So the improvement is
+not bought by sacrificing efficiency.
+
+====================================================================================================
+HORIZON STABILITY  (the paper's Fig. 4 view)
+====================================================================================================
+Between-group inequity as the horizon grows:
+   days         Paper          Ours
+      1       0.01498       0.00035
+      2       0.00253       0.00132
+      3       0.15748       0.00114
+      4       0.24206       0.00321
+      5       0.15639       0.00208
+      6       0.24008       0.00231
+      7       0.24733       0.00106
+
+Paper's group inequity GROWS 16.5x over the week
+(0.01498 -> 0.24733). Ours stays essentially flat (0.00035 -> 0.00106),
+two orders of magnitude lower. The paper claims 'long-term fairness';
+on the group metric it is long-term unfairness that accumulates.
+
+====================================================================================================
+ROBUSTNESS
+====================================================================================================
+1) Money-denominated utility (fare = $3.95/km, measured):
+     full-time  $  6.62/h  ->  $  8.20/h
+     part-time  $ 12.35/h  ->  $  7.93/h
+     ratio        1.865    ->    0.968
+     The gap survives the change of units, so it is a property of
+     the allocation, not of distance-denominated utility.
+
+2) Seed sensitivity (3 independent seeds: fleet, requests and RL exploration all re-drawn):
+            utility  rate_var   between     ratio  ratio_sd   utiladj
+fam                                                                  
+Ours   10726.387143  0.403821  0.001234  0.965074  0.009982  0.137462
+Paper  10849.524676  1.814291  0.460235  1.838385  0.015056  0.305558
+     The paper's group ratio is 1.83-1.86 across every seed, so the
+     inequity is systematic. Ours is 0.954-0.974 across every seed.
+
+3) The paper's own protocol (peak 2h/day, 1-hour steps, rate 0.05):
+     max driver hours 14.0/week -> 0 of 200 drivers can reach the
+     40h full-time threshold; service rate 2.6-3.0%; 99-106 of 200
+     drivers idle; utilisation pinned at 0.99.
+     The paper's setup structurally CANNOT measure either gap.
+     This is why the main experiments use a full-day timeline.
+
+====================================================================================================
+PREDICTION MODULE
+====================================================================================================
+  device                    mps
+  demand MSE (counts)       6.455
+  seasonal-naive baseline   8.856
+  improvement over naive    27.1%
+  congestion head MSE/MAE   0.01198 / 0.0826
+  The congestion head is what lets Gap 1a use a PREDICTED congestion
+  multiplier for future slots instead of reading ground truth.
+
+====================================================================================================
+LIMITATIONS REPORTED HONESTLY
+====================================================================================================
+1) The paper's prediction module gives no measurable benefit here.
+   Removing it: utility 10,145 -> 10,290 (slightly HIGHER), rate_var 0.446 -> 0.406.
+   We cannot reproduce the paper's Table 2 claim of a 41% utility
+   collapse without prediction (95,824 -> 56,873).
+2) The time-aware utility (Gap 1a) improves total utility by ~1% but does
+   not by itself improve fairness. Its contribution is measurement
+   correctness: 10.2% of utility signs flip. Reported as such.
+3) Var(total) is worse for our method by construction, not by error.
+4) Service rate is ~2 points below the paper method: a real, small cost.
+
+====================================================================================================
+ONE-LINE CONCLUSION
+====================================================================================================
+The paper equalises TOTAL earnings, which is the wrong target: it hides a
+7.8x hourly-rate gap, actively widens the full-time/part-time gap to
+1.62x, and never checks whether an available driver got work.
+Re-targeting the objective at HOURLY RATE (with a within/between group
+split) and UTILISATION brings the group ratio to 0.97x, cuts rate
+inequity -64.4%, eliminates idle drivers, and costs -0.7% of total utility.
+====================================================================================================

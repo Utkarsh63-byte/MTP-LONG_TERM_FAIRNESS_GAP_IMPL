@@ -1,0 +1,61 @@
+==============================================================================
+PHASE 1 VERIFICATION
+==============================================================================
+
+-- nodes (87) --
+  [PASS] node ids are 0..K-1
+  [PASS] centroids inside bbox
+  [PASS] every node carries volume  (min 2,602)
+
+-- trips (10,300,738) --
+  [PASS] no nulls
+  [PASS] o,d within range
+  [PASS] all in March 2016
+  [PASS] dropoff after pickup
+  [PASS] duration within filter
+  [PASS] sorted by pickup
+        date span 2016-03-01 .. 2016-03-31, 31 days
+
+-- distance matrix --
+  [PASS] shape (K,K)
+  [PASS] all finite
+  [PASS] strictly positive
+  [PASS] diagonal = intra-node distance
+  [PASS] digraph really is asymmetric  (max |d(a,b)-d(b,a)| = 7.90 km, median 0.209 km)
+  [PASS] observed pairs dominate  (80.8% observed)
+
+-- travel time --
+  [PASS] shape (K,K,P)  (P=48)
+  [PASS] tau finite and positive
+  [PASS] tau_bar finite and positive
+  [PASS] c within configured clip
+  [PASS] c centred near 1 on measured cells  (mean 0.984)
+  [PASS] implied speeds are plausible  (12.8-28.5 km/h)
+
+-- demand --
+  [PASS] od total == trip count  (10,300,738 vs 10,300,738)
+  [PASS] org == od collapsed over d
+  [PASS] 744 hours in March  (744)
+
+-- utility: does time_aware reduce to the paper at c=1? --
+  [PASS] time_aware == paper when c==1  (max |dU| = 0.00e+00, max slot diff = 0)
+  [PASS] real congestion actually changes utility  (mean |dU| = 3.468 km-equivalent)
+        calibrated fare per km = $3.95
+
+==============================================================================
+GAP 1a EVIDENCE (measured on the paper's own dataset and granularity)
+==============================================================================
+  citywide speed: 28.5 km/h (weekday 04:00) vs 12.8 km/h (weekday 12:00) = 2.22x
+12:44:36 | INFO    | ltf                | OD pairs measured across >=24 profiles: 969
+12:44:36 | INFO    | ltf                | peak/off-peak travel-time ratio: median 2.11x, p90 2.93x, max 4.35x
+  OD pairs measured across >=24 of 48 profiles: 969
+  peak/off-peak travel-time ratio: median 2.11x, p90 2.93x, max 4.35x
+  on 40,310 well-measured random (driver, request, time) triples:
+    paper utility     mean   3.224 km
+    time-aware utility mean   3.753 km
+    mean signed shift +0.529 km, mean |shift| 1.833 km, p95 |shift| 5.423 km
+    sign of utility flips on 10.2% of them (profitable <-> unprofitable)
+
+==============================================================================
+ALL PHASE 1 CHECKS PASSED
+==============================================================================

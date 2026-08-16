@@ -1,0 +1,127 @@
+
+================================================================================================
+1. DATASET USAGE  --  which rows feed which component
+================================================================================================
+  raw CSV rows                     12,210,952
+  after cleaning + Manhattan bbox  10,300,738   (84.4%)
+
+  Component                          rows used        share of clean data
+  --------------------------------------------------------------------------
+  Node/graph construction          10,300,738          100.0%
+  Geo distance matrix (87x87)      10,300,738          100.0%
+  Travel-time tensor (87x87x48)    10,300,738          100.0%
+  Demand tensor (87x87x744)        10,300,738          100.0%
+  Forecaster training samples       1,656,480          (4,640 OD pairs x 357 hours)
+  Test week available trips         2,231,191          21.7%  (25-31 Mar)
+12:44:32 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+12:44:32 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+12:44:32 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+12:44:32 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+12:44:32 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+12:44:32 | INFO    | ltf                | calibrated sample rate 0.00424: 63120 online slots x target 0.60 / 4 slots per job = 9468 jobs, from 2231191 available requests
+12:44:33 | INFO    | ltf                | requests: 9467 over 2016 slots (rate 0.0042), 4.7 per slot, 1352 per day
+12:44:34 | INFO    | ltf                | requests: 6604 over 2016 slots (rate 0.0030), 3.3 per slot, 943 per day
+12:44:34 | INFO    | ltf                |   calibration step 1: rate 0.002959 -> offered load 0.602 (target 0.60)
+12:44:34 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,604 (rate 0.00296), 3.3 per slot, offered load 0.602
+nodes: 87, utility mode 'time_aware' in distance units
+  ALLOCATION SIMULATION                 6,604          0.064%  <-- the thinned stream
+
+  So: 100% of the cleaned data builds the model (graph, distances,
+  travel times, demand, forecaster). The allocation EXPERIMENT then runs
+  on a stratified 0.00296 sample of the test week, exactly as
+  the paper thins its own data (Sec. 5.2 uses a 0.05 stratified sample).
+
+================================================================================================
+2. THE PAPER'S UNREPORTED DRIVER COUNT  (recovered from Table 1)
+================================================================================================
+  Total Utility / Mean utility per driver = number of drivers.
+
+  Method                             Total          Mean   implied n
+  ------------------------------------------------------------------
+  Greedy                     -1,514,736.24  -75,736.8100      20.000
+  REASSIGN                       76,536.23    3,826.8100      20.000
+  LAF                            80,606.49    4,030.3245      20.000
+  Balance Ride-Pooling           85,923.68    4,296.1800      20.000
+  Proposed Method                95,823.79    4,791.1900      20.000
+
+  Every row is EXACTLY 20.0, so the paper ran n = 20 drivers.
+  This is stated nowhere in the text -- we flagged the omission earlier
+  and it is now recoverable. We use n = 200, a 10x larger fleet.
+
+================================================================================================
+3. WHERE OUR 10,145 COMES FROM
+================================================================================================
+  total utility = (trips served) x (mean utility per trip)
+  ours :  4,073 trips x  2.491 km/trip =     10,145
+  paper(repro):  4,195 trips x  2.437 km/trip =     10,221
+
+  Both numbers are small because BOTH the request stream is thinned AND
+  a driver can only serve one trip at a time. The per-trip utility (~2.5 km
+  net of deadhead) is realistic for Manhattan.
+
+================================================================================================
+4. WHY THE PAPER'S 95,824 IS NOT PHYSICALLY ACHIEVABLE
+================================================================================================
+  Paper: mean utility per driver per week = 4,791.19
+  At a realistic net utility of 2.49 km per trip, that implies
+  1,924 trips per driver per week.
+
+  But the paper's protocol (Sec. 5.2) uses a peak 2-hour window per
+  day, so a driver is available at most 14 h in the week.
+  Mean Manhattan trip in the test week = 11.3 min, plus
+  ~4.5 min deadhead -> at most 53 trips per driver.
+
+  Required 1,924 trips vs physically possible 53
+  = 36x over capacity.
+
+  This is explained by the paper's own modelling choice (Sec. 4.3):
+  "The proposed method allows an agent (driver) to accept multiple
+  requests concurrently" -- and its utility has no time dimension, so
+  there is no bound on how much work one driver can absorb in a timestep.
+  Their utility therefore aggregates trips a real driver could not perform.
+
+  Our environment enforces occupancy: an assigned driver is unavailable
+  for tau(g,s) + tau(s,d) minutes. That single constraint is what makes
+  Gap 2 measurable at all, and it is the main reason our totals are
+  an order of magnitude smaller. The comparison that matters is therefore
+  WITHIN our harness (all six methods on identical settings), which is
+  exactly how Table 1 and Table 1b are constructed.
+
+================================================================================================
+5. OUR SETUP IS DEMAND-LIMITED BY DESIGN, NOT DATA-LIMITED
+================================================================================================
+  online driver-slots (5 min each)          63,120
+  mean slots consumed per trip                5.74   (measured)
+  => fleet capacity this week               11,006 trips
+  requests offered                           6,604
+  offered load = demand / capacity           0.600   (target 0.6)
+
+  Available (un-thinned) test-week trips: 2,231,191. We deliberately
+  do NOT use all of them: 2,231,191 requests against a capacity of
+  11,006 would be 203x oversubscribed, every driver would be
+  busy every minute, utilisation would pin at 1.0, and Var(utilisation)
+  -- the entire Gap 2 metric -- would collapse to zero for every method.
+  Confirmed empirically: under the paper's 0.05 rate our run gives 2.6%
+  service rate, 0.99 utilisation and 99 of 200 drivers idle.
+
+  The sample rate is solved so offered load = 0.60, i.e. the regime where
+  fairness is contested and both gaps are measurable.
+
+================================================================================================
+SUMMARY
+================================================================================================
+  * 100% of the cleaned dataset (10,300,738 trips) builds every model
+    component: graph, distances, 48-profile travel times, demand, forecaster.
+  * The allocation experiment runs on a calibrated stratified sample, which
+    is the same practice as the paper (it uses 0.05).
+  * The paper's much larger totals come from two unreported/unphysical
+    settings, not from more data: n = 20 drivers (recovered above) and
+    unlimited concurrent trips per driver, implying ~40x more trips per
+    driver than the hours in its own window allow.
+  * Absolute utilities are therefore not comparable across the two papers.
+    All conclusions here come from comparisons INSIDE one harness, where
+    every method sees identical drivers, requests, distances and times.
+================================================================================================

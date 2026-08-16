@@ -1,0 +1,20 @@
+# Python 3.14. Create the environment with:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#
+# torch is used only for the demand/congestion forecaster and is
+# device-agnostic: it picks CUDA, then Apple MPS, then CPU. Set the
+# LTF_DEVICE environment variable to override.
+
+numpy==2.5.2
+pandas==3.0.5
+pyarrow==25.0.1
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.1
+torch==2.13.0
+
+# document generation
+python-docx==1.2.0
+
+# only needed to re-extract text from the source PDFs
+pypdf==6.15.0

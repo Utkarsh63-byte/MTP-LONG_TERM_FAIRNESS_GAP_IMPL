@@ -1,0 +1,12 @@
+{
+  "demand_mse": 0.13783781230449677,
+  "demand_mae": 0.25824761390686035,
+  "demand_mse_counts": 6.45528507232666,
+  "congestion_mse": 0.011979825794696808,
+  "congestion_mae": 0.08256075531244278,
+  "baseline_mse_counts": 8.855881690979004,
+  "n_train": 1656480,
+  "n_test": 779520,
+  "device": "mps",
+  "epochs_run": 60
+}
