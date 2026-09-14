@@ -1,0 +1,531 @@
+22:07:08 | INFO    | ltf                | building the two environments (paper utility, time-aware utility)
+22:07:08 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+22:07:08 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+22:07:08 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+22:07:08 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+22:07:09 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+22:07:11 | INFO    | ltf                | requests: 6605 over 2016 slots (rate 0.0030), 3.3 per slot, 944 per day
+22:07:11 | INFO    | ltf                | sample rate pinned at 0.00296, measured offered load 0.596
+22:07:11 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,605 (rate 0.00296), 3.3 per slot, offered load 0.596
+nodes: 87, utility mode 'paper' in distance units
+22:07:11 | INFO    | ltf                | warmup (efficiency only): total utility 11,159.6, 4,837/6,493 requests served (74.5%), mean utilisation 0.315
+22:07:11 | INFO    | ltf                | calibrated omegas: total=1.792 rate=1234 util=5.439e+04
+22:07:11 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+22:07:11 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+22:07:11 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+22:07:11 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+22:07:11 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+22:07:12 | INFO    | ltf                | requests: 6875 over 2016 slots (rate 0.0030), 3.4 per slot, 982 per day
+22:07:12 | INFO    | ltf                | sample rate pinned at 0.00296, measured offered load 0.616
+22:07:12 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,875 (rate 0.00296), 3.4 per slot, offered load 0.616
+nodes: 87, utility mode 'paper' in distance units
+22:07:12 | INFO    | ltf                | forecaster ...
+22:07:17 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+22:07:17 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+22:07:19 | INFO    | ltf                | training forecaster on mps ...
+22:08:44 | INFO    | ltf                | training forecaster on mps done in 85.1s
+22:08:45 | INFO    | ltf                | forecaster test: demand MSE 0.1378 (log space), 6.46 (counts); seasonal-naive 8.86 -> 27.1% better
+22:08:45 | INFO    | ltf                | forecaster test: congestion MSE 0.01198, MAE 0.0826 (on directly-measured cells)
+22:08:45 | INFO    | ltf                | forecaster done in 92.7s
+22:08:46 | INFO    | ltf                | synthetic (predicted) requests: 6346 over 2016 slots
+22:08:46 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+22:08:46 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+22:08:46 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+22:08:46 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+22:08:48 | INFO    | ltf                | occupancy estimate: loaded 11.3 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+22:08:49 | INFO    | ltf                | requests: 6605 over 2016 slots (rate 0.0030), 3.3 per slot, 944 per day
+22:08:49 | INFO    | ltf                | sample rate pinned at 0.00296, measured offered load 0.603
+22:08:49 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-25 .. 2016-03-31), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,605 (rate 0.00296), 3.3 per slot, offered load 0.603
+nodes: 87, utility mode 'time_aware' in distance units
+22:08:49 | INFO    | ltf                | warmup (efficiency only): total utility 12,166.5, 4,949/6,493 requests served (76.2%), mean utilisation 0.318
+22:08:49 | INFO    | ltf                | calibrated omegas: total=1.644 rate=1131 util=5.853e+04
+22:08:49 | INFO    | ltf                | drivers: 200 (76 full-time, 124 part-time) over 7 days
+22:08:49 | INFO    | ltf                |   online hours: full-time mean 46.4 (min 34.4 max 54.9), part-time mean 14.0 (min 7.0 max 20.0)
+22:08:49 | INFO    | ltf                |   hours ratio between groups: 3.32x; total online slots 63120
+22:08:49 | INFO    | ltf                |   concurrent online drivers: min 0, median 35, max 66
+22:08:49 | INFO    | ltf                | occupancy estimate: loaded 11.4 min + deadhead 4.5 min (1.45 km @ 19.2 km/h) -> 4 slots of 5 min
+22:08:50 | INFO    | ltf                | requests: 6875 over 2016 slots (rate 0.0030), 3.4 per slot, 982 per day
+22:08:50 | INFO    | ltf                | sample rate pinned at 0.00296, measured offered load 0.622
+22:08:50 | INFO    | ltf                | scenario ready
+Timeline: 2016 slots of 5 min over 7 days (2016-03-18 .. 2016-03-24), history/current/future = 864/288/864 slots
+drivers: 200, online slots 63,120, concurrent min/med/max 0/35/66
+requests: 6,875 (rate 0.00296), 3.4 per slot, offered load 0.622
+nodes: 87, utility mode 'time_aware' in distance units
+22:08:50 | INFO    | ltf                | forecaster ...
+22:08:50 | INFO    | ltf                | forecaster: 4640 OD pairs x hourly steps, device=mps
+22:08:50 | INFO    | ltf                |   hours: train 357, val 48, test 168 (test starts at hour 576)
+22:08:51 | INFO    | ltf                | training forecaster on mps ...
+22:10:09 | INFO    | ltf                | training forecaster on mps done in 78.2s
+22:10:16 | INFO    | ltf                | forecaster test: demand MSE 0.1378 (log space), 6.46 (counts); seasonal-naive 8.86 -> 27.1% better
+22:10:16 | INFO    | ltf                | forecaster test: congestion MSE 0.01198, MAE 0.0826 (on directly-measured cells)
+22:10:16 | INFO    | ltf                | forecaster done in 85.5s
+22:10:18 | INFO    | ltf                | synthetic (predicted) requests: 6346 over 2016 slots
+22:10:18 | INFO    | ltf                | paper env requests   : 6605
+22:10:18 | INFO    | ltf                | time-aware requests  : 6605
+22:10:18 | INFO    | ltf                | training 0. Paper baseline (30 episodes over 2 scenario(s)) ...
+22:10:18 | INFO    | ltf                | 0. Paper baseline: total utility 2,471.9, 6,509/6,769 requests served (96.2%), mean utilisation 0.487
+22:10:19 | INFO    | ltf                | 0. Paper baseline: total utility 1,397.7, 6,034/6,235 requests served (96.8%), mean utilisation 0.446
+22:10:20 | INFO    | ltf                | 0. Paper baseline: total utility 2,603.2, 6,535/6,769 requests served (96.5%), mean utilisation 0.488
+22:10:21 | INFO    | ltf                | 0. Paper baseline: total utility 1,675.3, 6,038/6,235 requests served (96.8%), mean utilisation 0.445
+22:10:22 | INFO    | ltf                | 0. Paper baseline: total utility 2,760.7, 6,516/6,769 requests served (96.3%), mean utilisation 0.484
+22:10:23 | INFO    | ltf                | 0. Paper baseline: total utility 2,030.3, 6,053/6,235 requests served (97.1%), mean utilisation 0.442
+22:10:24 | INFO    | ltf                | 0. Paper baseline: total utility 2,898.7, 6,522/6,769 requests served (96.4%), mean utilisation 0.484
+22:10:25 | INFO    | ltf                | 0. Paper baseline: total utility 1,906.4, 6,051/6,235 requests served (97.0%), mean utilisation 0.442
+22:10:25 | INFO    | ltf                | 0. Paper baseline: total utility 3,120.1, 6,533/6,769 requests served (96.5%), mean utilisation 0.482
+22:10:26 | INFO    | ltf                | 0. Paper baseline: total utility 2,318.3, 6,041/6,235 requests served (96.9%), mean utilisation 0.438
+22:10:28 | INFO    | ltf                | 0. Paper baseline: total utility 3,349.2, 6,530/6,769 requests served (96.5%), mean utilisation 0.480
+22:10:28 | INFO    | ltf                | 0. Paper baseline: total utility 2,372.0, 6,054/6,235 requests served (97.1%), mean utilisation 0.438
+22:10:29 | INFO    | ltf                | 0. Paper baseline: total utility 3,697.1, 6,506/6,769 requests served (96.1%), mean utilisation 0.474
+22:10:30 | INFO    | ltf                | 0. Paper baseline: total utility 2,557.9, 6,029/6,235 requests served (96.7%), mean utilisation 0.435
+22:10:30 | INFO    | ltf                | 0. Paper baseline: total utility 3,626.5, 6,502/6,769 requests served (96.1%), mean utilisation 0.474
+22:10:31 | INFO    | ltf                | 0. Paper baseline: total utility 2,788.8, 6,076/6,235 requests served (97.4%), mean utilisation 0.434
+22:10:31 | INFO    | ltf                | 0. Paper baseline: total utility 3,989.5, 6,514/6,769 requests served (96.2%), mean utilisation 0.471
+22:10:32 | INFO    | ltf                | 0. Paper baseline: total utility 2,826.3, 6,045/6,235 requests served (97.0%), mean utilisation 0.433
+22:10:33 | INFO    | ltf                | 0. Paper baseline: total utility 3,988.1, 6,520/6,769 requests served (96.3%), mean utilisation 0.472
+22:10:33 | INFO    | ltf                | 0. Paper baseline: total utility 3,011.9, 6,042/6,235 requests served (96.9%), mean utilisation 0.431
+22:10:33 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7000.0, |V|>0 on 31529/104400 states
+22:10:34 | INFO    | ltf                | 0. Paper baseline: total utility 4,121.4, 6,502/6,769 requests served (96.1%), mean utilisation 0.468
+22:10:34 | INFO    | ltf                | 0. Paper baseline: total utility 3,144.3, 6,054/6,235 requests served (97.1%), mean utilisation 0.430
+22:10:35 | INFO    | ltf                | 0. Paper baseline: total utility 4,502.9, 6,503/6,769 requests served (96.1%), mean utilisation 0.465
+22:10:35 | INFO    | ltf                | 0. Paper baseline: total utility 3,402.0, 6,074/6,235 requests served (97.4%), mean utilisation 0.429
+22:10:36 | INFO    | ltf                | 0. Paper baseline: total utility 4,639.1, 6,513/6,769 requests served (96.2%), mean utilisation 0.463
+22:10:36 | INFO    | ltf                | 0. Paper baseline: total utility 3,572.3, 6,038/6,235 requests served (96.8%), mean utilisation 0.425
+22:10:37 | INFO    | ltf                | 0. Paper baseline: total utility 4,798.2, 6,533/6,769 requests served (96.5%), mean utilisation 0.464
+22:10:37 | INFO    | ltf                | 0. Paper baseline: total utility 3,676.9, 6,040/6,235 requests served (96.9%), mean utilisation 0.423
+22:10:38 | INFO    | ltf                | 0. Paper baseline: total utility 4,991.9, 6,500/6,769 requests served (96.0%), mean utilisation 0.460
+22:10:38 | INFO    | ltf                | 0. Paper baseline: total utility 4,121.4, 6,060/6,235 requests served (97.2%), mean utilisation 0.421
+22:10:39 | INFO    | ltf                | 0. Paper baseline: total utility 5,040.1, 6,492/6,769 requests served (95.9%), mean utilisation 0.460
+22:10:39 | INFO    | ltf                | 0. Paper baseline: total utility 4,122.6, 6,038/6,235 requests served (96.8%), mean utilisation 0.420
+22:10:40 | INFO    | ltf                | 0. Paper baseline: total utility 5,504.7, 6,521/6,769 requests served (96.3%), mean utilisation 0.457
+22:10:40 | INFO    | ltf                | 0. Paper baseline: total utility 4,129.8, 6,039/6,235 requests served (96.9%), mean utilisation 0.418
+22:10:41 | INFO    | ltf                | 0. Paper baseline: total utility 5,556.0, 6,531/6,769 requests served (96.5%), mean utilisation 0.457
+22:10:41 | INFO    | ltf                | 0. Paper baseline: total utility 4,497.8, 6,066/6,235 requests served (97.3%), mean utilisation 0.417
+22:10:42 | INFO    | ltf                | 0. Paper baseline: total utility 5,581.9, 6,510/6,769 requests served (96.2%), mean utilisation 0.455
+22:10:43 | INFO    | ltf                | 0. Paper baseline: total utility 4,580.6, 6,070/6,235 requests served (97.4%), mean utilisation 0.416
+22:10:43 | INFO    | ltf                | 0. Paper baseline: total utility 5,768.1, 6,502/6,769 requests served (96.1%), mean utilisation 0.452
+22:10:44 | INFO    | ltf                | 0. Paper baseline: total utility 4,859.4, 6,064/6,235 requests served (97.3%), mean utilisation 0.414
+22:10:44 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 10627.5, |V|>0 on 39112/104400 states
+22:10:44 | INFO    | ltf                | 0. Paper baseline: total utility 6,150.6, 6,513/6,769 requests served (96.2%), mean utilisation 0.450
+22:10:45 | INFO    | ltf                | 0. Paper baseline: total utility 4,831.6, 6,058/6,235 requests served (97.2%), mean utilisation 0.413
+22:10:45 | INFO    | ltf                | 0. Paper baseline: total utility 6,269.2, 6,502/6,769 requests served (96.1%), mean utilisation 0.448
+22:10:46 | INFO    | ltf                | 0. Paper baseline: total utility 4,991.0, 6,054/6,235 requests served (97.1%), mean utilisation 0.412
+22:10:46 | INFO    | ltf                | 0. Paper baseline: total utility 6,345.9, 6,520/6,769 requests served (96.3%), mean utilisation 0.447
+22:10:47 | INFO    | ltf                | 0. Paper baseline: total utility 5,411.8, 6,054/6,235 requests served (97.1%), mean utilisation 0.407
+22:10:47 | INFO    | ltf                | 0. Paper baseline: total utility 6,554.4, 6,524/6,769 requests served (96.4%), mean utilisation 0.446
+22:10:48 | INFO    | ltf                | 0. Paper baseline: total utility 5,448.7, 6,066/6,235 requests served (97.3%), mean utilisation 0.408
+22:10:48 | INFO    | ltf                | 0. Paper baseline: total utility 6,532.6, 6,517/6,769 requests served (96.3%), mean utilisation 0.446
+22:10:49 | INFO    | ltf                | 0. Paper baseline: total utility 5,552.0, 6,058/6,235 requests served (97.2%), mean utilisation 0.407
+22:10:49 | INFO    | ltf                | 0. Paper baseline: total utility 6,752.0, 6,513/6,769 requests served (96.2%), mean utilisation 0.444
+22:10:50 | INFO    | ltf                | 0. Paper baseline: total utility 5,689.7, 6,060/6,235 requests served (97.2%), mean utilisation 0.404
+22:10:50 | INFO    | ltf                | 0. Paper baseline: total utility 7,105.1, 6,520/6,769 requests served (96.3%), mean utilisation 0.440
+22:10:51 | INFO    | ltf                | 0. Paper baseline: total utility 5,932.4, 6,060/6,235 requests served (97.2%), mean utilisation 0.401
+22:10:52 | INFO    | ltf                | 0. Paper baseline: total utility 7,115.7, 6,528/6,769 requests served (96.4%), mean utilisation 0.440
+22:10:52 | INFO    | ltf                | 0. Paper baseline: total utility 6,199.1, 6,065/6,235 requests served (97.3%), mean utilisation 0.399
+22:10:53 | INFO    | ltf                | 0. Paper baseline: total utility 7,400.6, 6,505/6,769 requests served (96.1%), mean utilisation 0.436
+22:10:53 | INFO    | ltf                | 0. Paper baseline: total utility 6,128.9, 6,035/6,235 requests served (96.8%), mean utilisation 0.398
+22:10:54 | INFO    | ltf                | 0. Paper baseline: total utility 7,515.9, 6,528/6,769 requests served (96.4%), mean utilisation 0.436
+22:10:54 | INFO    | ltf                | 0. Paper baseline: total utility 6,421.3, 6,061/6,235 requests served (97.2%), mean utilisation 0.397
+22:10:54 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 13937.2, |V|>0 on 43038/104400 states
+22:10:54 | INFO    | ltf                | training 0. Paper baseline (30 episodes over 2 scenario(s)) done in 36.7s
+22:10:55 | INFO    | ltf                | 0. Paper baseline: total utility 10,508.2, 4,848/6,493 requests served (74.7%), mean utilisation 0.323
+22:10:55 | INFO    | ltf                | training 1. Paper + Gap 1a only (30 episodes over 2 scenario(s)) ...
+22:10:55 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,747.3, 6,546/6,769 requests served (96.7%), mean utilisation 0.496
+22:10:56 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 1,721.7, 6,067/6,235 requests served (97.3%), mean utilisation 0.455
+22:10:57 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,838.5, 6,537/6,769 requests served (96.6%), mean utilisation 0.495
+22:10:57 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 1,744.8, 6,050/6,235 requests served (97.0%), mean utilisation 0.455
+22:10:58 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,883.6, 6,525/6,769 requests served (96.4%), mean utilisation 0.493
+22:10:58 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,142.3, 6,086/6,235 requests served (97.6%), mean utilisation 0.453
+22:10:59 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,406.2, 6,547/6,769 requests served (96.7%), mean utilisation 0.491
+22:10:59 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,108.4, 6,091/6,235 requests served (97.7%), mean utilisation 0.453
+22:11:00 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,433.2, 6,560/6,769 requests served (96.9%), mean utilisation 0.491
+22:11:00 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,352.4, 6,066/6,235 requests served (97.3%), mean utilisation 0.449
+22:11:01 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,504.7, 6,549/6,769 requests served (96.7%), mean utilisation 0.489
+22:11:01 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,556.5, 6,063/6,235 requests served (97.2%), mean utilisation 0.447
+22:11:02 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,919.8, 6,550/6,769 requests served (96.8%), mean utilisation 0.484
+22:11:03 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,615.9, 6,090/6,235 requests served (97.7%), mean utilisation 0.447
+22:11:03 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,035.9, 6,535/6,769 requests served (96.5%), mean utilisation 0.482
+22:11:04 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 2,907.0, 6,083/6,235 requests served (97.6%), mean utilisation 0.444
+22:11:04 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,008.1, 6,539/6,769 requests served (96.6%), mean utilisation 0.483
+22:11:05 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,122.9, 6,080/6,235 requests served (97.5%), mean utilisation 0.441
+22:11:05 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,439.1, 6,540/6,769 requests served (96.6%), mean utilisation 0.479
+22:11:06 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,217.3, 6,070/6,235 requests served (97.4%), mean utilisation 0.441
+22:11:06 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7656.4, |V|>0 on 28492/104400 states
+22:11:06 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,467.0, 6,526/6,769 requests served (96.4%), mean utilisation 0.478
+22:11:07 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,383.9, 6,055/6,235 requests served (97.1%), mean utilisation 0.437
+22:11:07 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,623.7, 6,538/6,769 requests served (96.6%), mean utilisation 0.477
+22:11:08 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,474.0, 6,050/6,235 requests served (97.0%), mean utilisation 0.436
+22:11:08 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,864.6, 6,546/6,769 requests served (96.7%), mean utilisation 0.475
+22:11:09 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,755.5, 6,077/6,235 requests served (97.5%), mean utilisation 0.435
+22:11:10 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,094.8, 6,540/6,769 requests served (96.6%), mean utilisation 0.472
+22:11:10 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 3,982.9, 6,076/6,235 requests served (97.4%), mean utilisation 0.433
+22:11:11 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,173.9, 6,530/6,769 requests served (96.5%), mean utilisation 0.470
+22:11:11 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,085.6, 6,063/6,235 requests served (97.2%), mean utilisation 0.430
+22:11:12 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,301.2, 6,552/6,769 requests served (96.8%), mean utilisation 0.471
+22:11:12 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,344.8, 6,090/6,235 requests served (97.7%), mean utilisation 0.430
+22:11:13 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,599.8, 6,556/6,769 requests served (96.9%), mean utilisation 0.468
+22:11:13 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,487.3, 6,060/6,235 requests served (97.2%), mean utilisation 0.425
+22:11:14 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,836.6, 6,546/6,769 requests served (96.7%), mean utilisation 0.465
+22:11:14 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,684.3, 6,093/6,235 requests served (97.7%), mean utilisation 0.425
+22:11:15 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,029.6, 6,552/6,769 requests served (96.8%), mean utilisation 0.464
+22:11:16 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,754.8, 6,086/6,235 requests served (97.6%), mean utilisation 0.426
+22:11:16 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,122.5, 6,547/6,769 requests served (96.7%), mean utilisation 0.462
+22:11:17 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 4,928.3, 6,074/6,235 requests served (97.4%), mean utilisation 0.421
+22:11:17 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11050.8, |V|>0 on 35626/104400 states
+22:11:18 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,521.5, 6,569/6,769 requests served (97.0%), mean utilisation 0.460
+22:11:18 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,232.6, 6,076/6,235 requests served (97.4%), mean utilisation 0.420
+22:11:19 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,390.7, 6,563/6,769 requests served (97.0%), mean utilisation 0.461
+22:11:20 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,357.9, 6,092/6,235 requests served (97.7%), mean utilisation 0.419
+22:11:20 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,576.4, 6,527/6,769 requests served (96.4%), mean utilisation 0.455
+22:11:21 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,512.5, 6,089/6,235 requests served (97.7%), mean utilisation 0.418
+22:11:22 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,879.7, 6,532/6,769 requests served (96.5%), mean utilisation 0.453
+22:11:22 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,645.6, 6,079/6,235 requests served (97.5%), mean utilisation 0.414
+22:11:23 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 7,058.6, 6,552/6,769 requests served (96.8%), mean utilisation 0.454
+22:11:23 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,827.9, 6,073/6,235 requests served (97.4%), mean utilisation 0.412
+22:11:24 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 7,279.2, 6,530/6,769 requests served (96.5%), mean utilisation 0.449
+22:11:25 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,042.8, 6,079/6,235 requests served (97.5%), mean utilisation 0.410
+22:11:25 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 7,608.9, 6,563/6,769 requests served (97.0%), mean utilisation 0.449
+22:11:26 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 5,988.9, 6,079/6,235 requests served (97.5%), mean utilisation 0.411
+22:11:27 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 7,578.2, 6,522/6,769 requests served (96.4%), mean utilisation 0.445
+22:11:28 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,380.4, 6,096/6,235 requests served (97.8%), mean utilisation 0.408
+22:11:28 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 7,822.3, 6,551/6,769 requests served (96.8%), mean utilisation 0.444
+22:11:29 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,383.9, 6,095/6,235 requests served (97.8%), mean utilisation 0.407
+22:11:29 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 7,967.8, 6,560/6,769 requests served (96.9%), mean utilisation 0.442
+22:11:30 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 6,829.9, 6,103/6,235 requests served (97.9%), mean utilisation 0.404
+22:11:30 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14797.8, |V|>0 on 39781/104400 states
+22:11:30 | INFO    | ltf                | training 1. Paper + Gap 1a only (30 episodes over 2 scenario(s)) done in 35.4s
+22:11:31 | INFO    | ltf                | 1. Paper + Gap 1a only: total utility 11,064.7, 4,950/6,493 requests served (76.2%), mean utilisation 0.328
+22:11:31 | INFO    | ltf                | training 2. Paper + Gap 1b only (30 episodes over 2 scenario(s)) ...
+22:11:32 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,340.2, 6,502/6,769 requests served (96.1%), mean utilisation 0.488
+22:11:33 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 1,310.1, 6,038/6,235 requests served (96.8%), mean utilisation 0.448
+22:11:33 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,510.7, 6,522/6,769 requests served (96.4%), mean utilisation 0.487
+22:11:34 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 1,553.4, 6,045/6,235 requests served (97.0%), mean utilisation 0.446
+22:11:35 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,646.1, 6,510/6,769 requests served (96.2%), mean utilisation 0.485
+22:11:35 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 1,893.8, 6,048/6,235 requests served (97.0%), mean utilisation 0.443
+22:11:36 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,994.5, 6,490/6,769 requests served (95.9%), mean utilisation 0.479
+22:11:37 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 1,996.8, 6,067/6,235 requests served (97.3%), mean utilisation 0.443
+22:11:37 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,056.8, 6,529/6,769 requests served (96.5%), mean utilisation 0.481
+22:11:38 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,272.7, 6,055/6,235 requests served (97.1%), mean utilisation 0.439
+22:11:39 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,157.8, 6,520/6,769 requests served (96.3%), mean utilisation 0.479
+22:11:40 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,296.1, 6,049/6,235 requests served (97.0%), mean utilisation 0.440
+22:11:40 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,384.1, 6,539/6,769 requests served (96.6%), mean utilisation 0.480
+22:11:41 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,646.4, 6,061/6,235 requests served (97.2%), mean utilisation 0.436
+22:11:42 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,668.0, 6,495/6,769 requests served (96.0%), mean utilisation 0.473
+22:11:42 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,620.0, 6,043/6,235 requests served (96.9%), mean utilisation 0.435
+22:11:43 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,785.1, 6,516/6,769 requests served (96.3%), mean utilisation 0.474
+22:11:44 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 2,801.6, 6,048/6,235 requests served (97.0%), mean utilisation 0.432
+22:11:44 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,096.5, 6,527/6,769 requests served (96.4%), mean utilisation 0.471
+22:11:45 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,108.1, 6,042/6,235 requests served (96.9%), mean utilisation 0.430
+22:11:45 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7204.5, |V|>0 on 30817/104400 states
+22:11:46 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,219.4, 6,533/6,769 requests served (96.5%), mean utilisation 0.470
+22:11:46 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,217.1, 6,038/6,235 requests served (96.8%), mean utilisation 0.429
+22:11:47 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,363.7, 6,504/6,769 requests served (96.1%), mean utilisation 0.466
+22:11:48 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,379.7, 6,045/6,235 requests served (97.0%), mean utilisation 0.427
+22:11:48 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,639.2, 6,513/6,769 requests served (96.2%), mean utilisation 0.465
+22:11:49 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,448.5, 6,047/6,235 requests served (97.0%), mean utilisation 0.427
+22:11:50 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,601.6, 6,502/6,769 requests served (96.1%), mean utilisation 0.464
+22:11:51 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 3,730.1, 6,053/6,235 requests served (97.1%), mean utilisation 0.423
+22:11:52 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,890.3, 6,519/6,769 requests served (96.3%), mean utilisation 0.462
+22:11:52 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,027.5, 6,054/6,235 requests served (97.1%), mean utilisation 0.421
+22:11:53 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,918.4, 6,513/6,769 requests served (96.2%), mean utilisation 0.462
+22:11:54 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,026.3, 6,028/6,235 requests served (96.7%), mean utilisation 0.420
+22:11:54 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,296.0, 6,523/6,769 requests served (96.4%), mean utilisation 0.459
+22:11:55 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,258.9, 6,058/6,235 requests served (97.2%), mean utilisation 0.418
+22:11:56 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,352.4, 6,528/6,769 requests served (96.4%), mean utilisation 0.459
+22:11:56 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,374.9, 6,036/6,235 requests served (96.8%), mean utilisation 0.416
+22:11:57 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,573.1, 6,520/6,769 requests served (96.3%), mean utilisation 0.455
+22:11:58 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,483.5, 6,038/6,235 requests served (96.8%), mean utilisation 0.416
+22:11:58 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,682.2, 6,512/6,769 requests served (96.2%), mean utilisation 0.453
+22:11:59 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,627.5, 6,034/6,235 requests served (96.8%), mean utilisation 0.413
+22:11:59 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 10309.8, |V|>0 on 38745/104400 states
+22:12:00 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,994.8, 6,522/6,769 requests served (96.4%), mean utilisation 0.451
+22:12:00 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 4,876.5, 6,050/6,235 requests served (97.0%), mean utilisation 0.413
+22:12:01 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,057.5, 6,523/6,769 requests served (96.4%), mean utilisation 0.450
+22:12:02 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,224.8, 6,058/6,235 requests served (97.2%), mean utilisation 0.409
+22:12:02 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,451.2, 6,529/6,769 requests served (96.5%), mean utilisation 0.448
+22:12:03 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,304.4, 6,073/6,235 requests served (97.4%), mean utilisation 0.410
+22:12:04 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,506.6, 6,492/6,769 requests served (95.9%), mean utilisation 0.444
+22:12:04 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,422.8, 6,045/6,235 requests served (97.0%), mean utilisation 0.406
+22:12:05 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,610.9, 6,502/6,769 requests served (96.1%), mean utilisation 0.444
+22:12:06 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,466.1, 6,053/6,235 requests served (97.1%), mean utilisation 0.406
+22:12:06 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,852.4, 6,503/6,769 requests served (96.1%), mean utilisation 0.440
+22:12:07 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,613.1, 6,050/6,235 requests served (97.0%), mean utilisation 0.405
+22:12:08 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,940.7, 6,498/6,769 requests served (96.0%), mean utilisation 0.440
+22:12:08 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 5,526.0, 6,048/6,235 requests served (97.0%), mean utilisation 0.405
+22:12:09 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 7,087.6, 6,518/6,769 requests served (96.3%), mean utilisation 0.440
+22:12:10 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,033.8, 6,048/6,235 requests served (97.0%), mean utilisation 0.401
+22:12:10 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 7,298.9, 6,530/6,769 requests served (96.5%), mean utilisation 0.438
+22:12:11 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,137.5, 6,041/6,235 requests served (96.9%), mean utilisation 0.399
+22:12:12 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 7,488.5, 6,538/6,769 requests served (96.6%), mean utilisation 0.437
+22:12:13 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 6,273.1, 6,060/6,235 requests served (97.2%), mean utilisation 0.398
+22:12:13 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 13761.6, |V|>0 on 42692/104400 states
+22:12:13 | INFO    | ltf                | training 2. Paper + Gap 1b only (30 episodes over 2 scenario(s)) done in 41.6s
+22:12:13 | INFO    | ltf                | 2. Paper + Gap 1b only: total utility 10,457.0, 4,698/6,493 requests served (72.4%), mean utilisation 0.315
+22:12:14 | INFO    | ltf                | training 3. Paper + Gap 1 whole (1a+1b) (30 episodes over 2 scenario(s)) ...
+22:12:14 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,843.6, 6,530/6,769 requests served (96.5%), mean utilisation 0.494
+22:12:15 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 1,711.4, 6,074/6,235 requests served (97.4%), mean utilisation 0.457
+22:12:16 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,768.4, 6,517/6,769 requests served (96.3%), mean utilisation 0.495
+22:12:17 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 1,759.2, 6,067/6,235 requests served (97.3%), mean utilisation 0.456
+22:12:18 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,726.0, 6,528/6,769 requests served (96.4%), mean utilisation 0.495
+22:12:18 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 1,942.9, 6,073/6,235 requests served (97.4%), mean utilisation 0.453
+22:12:19 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,290.5, 6,544/6,769 requests served (96.7%), mean utilisation 0.491
+22:12:20 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,184.2, 6,077/6,235 requests served (97.5%), mean utilisation 0.452
+22:12:21 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,475.6, 6,528/6,769 requests served (96.4%), mean utilisation 0.488
+22:12:21 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,352.2, 6,066/6,235 requests served (97.3%), mean utilisation 0.450
+22:12:22 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,444.0, 6,536/6,769 requests served (96.6%), mean utilisation 0.489
+22:12:23 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,283.1, 6,069/6,235 requests served (97.3%), mean utilisation 0.450
+22:12:24 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,443.9, 6,542/6,769 requests served (96.6%), mean utilisation 0.490
+22:12:24 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 2,644.2, 6,049/6,235 requests served (97.0%), mean utilisation 0.444
+22:12:25 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,585.7, 6,526/6,769 requests served (96.4%), mean utilisation 0.485
+22:12:26 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,006.1, 6,070/6,235 requests served (97.4%), mean utilisation 0.442
+22:12:26 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,197.3, 6,534/6,769 requests served (96.5%), mean utilisation 0.481
+22:12:27 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,051.6, 6,072/6,235 requests served (97.4%), mean utilisation 0.441
+22:12:28 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,461.3, 6,552/6,769 requests served (96.8%), mean utilisation 0.479
+22:12:29 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,198.8, 6,064/6,235 requests served (97.3%), mean utilisation 0.440
+22:12:29 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7660.1, |V|>0 on 27674/104400 states
+22:12:30 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,396.2, 6,535/6,769 requests served (96.5%), mean utilisation 0.479
+22:12:31 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,419.3, 6,063/6,235 requests served (97.2%), mean utilisation 0.439
+22:12:33 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,610.7, 6,548/6,769 requests served (96.7%), mean utilisation 0.478
+22:12:36 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,658.2, 6,081/6,235 requests served (97.5%), mean utilisation 0.436
+22:12:38 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,738.7, 6,531/6,769 requests served (96.5%), mean utilisation 0.474
+22:12:39 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 3,724.9, 6,050/6,235 requests served (97.0%), mean utilisation 0.433
+22:12:40 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,021.8, 6,547/6,769 requests served (96.7%), mean utilisation 0.474
+22:12:41 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,047.0, 6,075/6,235 requests served (97.4%), mean utilisation 0.432
+22:12:41 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,165.4, 6,546/6,769 requests served (96.7%), mean utilisation 0.472
+22:12:42 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,057.0, 6,087/6,235 requests served (97.6%), mean utilisation 0.434
+22:12:43 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,200.5, 6,523/6,769 requests served (96.4%), mean utilisation 0.470
+22:12:44 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,252.6, 6,078/6,235 requests served (97.5%), mean utilisation 0.430
+22:12:44 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,663.5, 6,537/6,769 requests served (96.6%), mean utilisation 0.466
+22:12:45 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,384.7, 6,086/6,235 requests served (97.6%), mean utilisation 0.428
+22:12:46 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,799.0, 6,552/6,769 requests served (96.8%), mean utilisation 0.466
+22:12:46 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,735.9, 6,070/6,235 requests served (97.4%), mean utilisation 0.424
+22:12:47 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,828.8, 6,527/6,769 requests served (96.4%), mean utilisation 0.464
+22:12:48 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,771.7, 6,084/6,235 requests served (97.6%), mean utilisation 0.425
+22:12:49 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,100.0, 6,517/6,769 requests served (96.3%), mean utilisation 0.461
+22:12:50 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,953.0, 6,098/6,235 requests served (97.8%), mean utilisation 0.425
+22:12:50 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 11052.9, |V|>0 on 34837/104400 states
+22:12:51 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,442.9, 6,525/6,769 requests served (96.4%), mean utilisation 0.458
+22:12:51 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 4,938.1, 6,069/6,235 requests served (97.3%), mean utilisation 0.421
+22:12:52 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,547.5, 6,563/6,769 requests served (97.0%), mean utilisation 0.459
+22:12:53 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,297.5, 6,072/6,235 requests served (97.4%), mean utilisation 0.418
+22:12:53 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,729.8, 6,547/6,769 requests served (96.7%), mean utilisation 0.456
+22:12:54 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,389.5, 6,079/6,235 requests served (97.5%), mean utilisation 0.417
+22:12:55 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,866.7, 6,540/6,769 requests served (96.6%), mean utilisation 0.454
+22:12:55 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,607.8, 6,066/6,235 requests served (97.3%), mean utilisation 0.415
+22:12:56 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,889.0, 6,535/6,769 requests served (96.5%), mean utilisation 0.453
+22:12:57 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,742.2, 6,078/6,235 requests served (97.5%), mean utilisation 0.414
+22:12:57 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 7,093.2, 6,529/6,769 requests served (96.5%), mean utilisation 0.450
+22:12:58 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 5,970.9, 6,096/6,235 requests served (97.8%), mean utilisation 0.413
+22:12:59 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 7,340.6, 6,577/6,769 requests served (97.2%), mean utilisation 0.451
+22:12:59 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,078.0, 6,089/6,235 requests served (97.7%), mean utilisation 0.411
+22:13:00 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 7,636.1, 6,552/6,769 requests served (96.8%), mean utilisation 0.445
+22:13:01 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,333.4, 6,096/6,235 requests served (97.8%), mean utilisation 0.408
+22:13:01 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 7,843.5, 6,550/6,769 requests served (96.8%), mean utilisation 0.444
+22:13:02 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,417.5, 6,079/6,235 requests served (97.5%), mean utilisation 0.407
+22:13:03 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 7,704.7, 6,532/6,769 requests served (96.5%), mean utilisation 0.443
+22:13:03 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 6,672.8, 6,085/6,235 requests served (97.6%), mean utilisation 0.403
+22:13:03 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14377.5, |V|>0 on 38807/104400 states
+22:13:03 | INFO    | ltf                | training 3. Paper + Gap 1 whole (1a+1b) (30 episodes over 2 scenario(s)) done in 49.7s
+22:13:04 | INFO    | ltf                | 3. Paper + Gap 1 whole (1a+1b): total utility 11,006.6, 4,875/6,493 requests served (75.1%), mean utilisation 0.324
+22:13:04 | INFO    | ltf                | training 4. Paper + Gap 2 only (30 episodes over 2 scenario(s)) ...
+22:13:04 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,492.6, 6,523/6,769 requests served (96.4%), mean utilisation 0.488
+22:13:05 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 1,693.2, 6,046/6,235 requests served (97.0%), mean utilisation 0.446
+22:13:05 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,566.4, 6,516/6,769 requests served (96.3%), mean utilisation 0.486
+22:13:06 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 1,508.8, 6,046/6,235 requests served (97.0%), mean utilisation 0.445
+22:13:06 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,818.2, 6,524/6,769 requests served (96.4%), mean utilisation 0.485
+22:13:07 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 1,961.5, 6,059/6,235 requests served (97.2%), mean utilisation 0.443
+22:13:08 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,822.4, 6,519/6,769 requests served (96.3%), mean utilisation 0.484
+22:13:08 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 1,998.0, 6,056/6,235 requests served (97.1%), mean utilisation 0.442
+22:13:09 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,187.2, 6,528/6,769 requests served (96.4%), mean utilisation 0.481
+22:13:09 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,148.6, 6,030/6,235 requests served (96.7%), mean utilisation 0.439
+22:13:10 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,186.2, 6,503/6,769 requests served (96.1%), mean utilisation 0.478
+22:13:10 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,435.1, 6,052/6,235 requests served (97.1%), mean utilisation 0.438
+22:13:11 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,450.8, 6,514/6,769 requests served (96.2%), mean utilisation 0.477
+22:13:11 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,607.4, 6,056/6,235 requests served (97.1%), mean utilisation 0.436
+22:13:12 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,517.0, 6,514/6,769 requests served (96.2%), mean utilisation 0.476
+22:13:12 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,557.2, 6,067/6,235 requests served (97.3%), mean utilisation 0.438
+22:13:13 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,838.9, 6,517/6,769 requests served (96.3%), mean utilisation 0.474
+22:13:13 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 2,953.9, 6,070/6,235 requests served (97.4%), mean utilisation 0.434
+22:13:14 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,152.9, 6,529/6,769 requests served (96.5%), mean utilisation 0.472
+22:13:15 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,044.0, 6,034/6,235 requests served (96.8%), mean utilisation 0.431
+22:13:15 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7196.8, |V|>0 on 31475/104400 states
+22:13:15 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,113.0, 6,513/6,769 requests served (96.2%), mean utilisation 0.470
+22:13:16 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,075.7, 6,040/6,235 requests served (96.9%), mean utilisation 0.430
+22:13:16 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,172.5, 6,505/6,769 requests served (96.1%), mean utilisation 0.469
+22:13:17 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,226.8, 6,060/6,235 requests served (97.2%), mean utilisation 0.430
+22:13:17 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,463.8, 6,522/6,769 requests served (96.4%), mean utilisation 0.467
+22:13:18 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,362.0, 6,052/6,235 requests served (97.1%), mean utilisation 0.428
+22:13:18 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,771.0, 6,524/6,769 requests served (96.4%), mean utilisation 0.465
+22:13:19 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,442.8, 6,050/6,235 requests served (97.0%), mean utilisation 0.426
+22:13:20 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,880.4, 6,501/6,769 requests served (96.0%), mean utilisation 0.463
+22:13:20 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 3,810.1, 6,048/6,235 requests served (97.0%), mean utilisation 0.423
+22:13:21 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,800.2, 6,532/6,769 requests served (96.5%), mean utilisation 0.464
+22:13:21 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,081.3, 6,060/6,235 requests served (97.2%), mean utilisation 0.422
+22:13:22 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,331.8, 6,517/6,769 requests served (96.3%), mean utilisation 0.459
+22:13:23 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,107.0, 6,052/6,235 requests served (97.1%), mean utilisation 0.420
+22:13:23 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,212.0, 6,527/6,769 requests served (96.4%), mean utilisation 0.460
+22:13:24 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,288.4, 6,034/6,235 requests served (96.8%), mean utilisation 0.418
+22:13:24 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,450.7, 6,520/6,769 requests served (96.3%), mean utilisation 0.457
+22:13:25 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,459.1, 6,060/6,235 requests served (97.2%), mean utilisation 0.418
+22:13:25 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,653.4, 6,519/6,769 requests served (96.3%), mean utilisation 0.456
+22:13:26 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,533.5, 6,045/6,235 requests served (97.0%), mean utilisation 0.415
+22:13:26 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 10186.9, |V|>0 on 39006/104400 states
+22:13:27 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,875.9, 6,523/6,769 requests served (96.4%), mean utilisation 0.454
+22:13:27 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,657.7, 6,051/6,235 requests served (97.0%), mean utilisation 0.414
+22:13:28 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,017.5, 6,500/6,769 requests served (96.0%), mean utilisation 0.451
+22:13:28 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 4,909.0, 6,028/6,235 requests served (96.7%), mean utilisation 0.411
+22:13:29 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,186.0, 6,519/6,769 requests served (96.3%), mean utilisation 0.449
+22:13:29 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,051.5, 6,058/6,235 requests served (97.2%), mean utilisation 0.411
+22:13:30 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,435.1, 6,517/6,769 requests served (96.3%), mean utilisation 0.446
+22:13:30 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,413.6, 6,056/6,235 requests served (97.1%), mean utilisation 0.408
+22:13:31 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,372.0, 6,504/6,769 requests served (96.1%), mean utilisation 0.447
+22:13:31 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,546.1, 6,057/6,235 requests served (97.1%), mean utilisation 0.406
+22:13:32 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,635.3, 6,529/6,769 requests served (96.5%), mean utilisation 0.446
+22:13:32 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,494.0, 6,052/6,235 requests served (97.1%), mean utilisation 0.405
+22:13:33 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,941.9, 6,505/6,769 requests served (96.1%), mean utilisation 0.440
+22:13:34 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,553.2, 6,033/6,235 requests served (96.8%), mean utilisation 0.404
+22:13:34 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 7,062.8, 6,532/6,769 requests served (96.5%), mean utilisation 0.442
+22:13:35 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 5,980.7, 6,057/6,235 requests served (97.1%), mean utilisation 0.401
+22:13:35 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 7,208.5, 6,516/6,769 requests served (96.3%), mean utilisation 0.437
+22:13:36 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,051.1, 6,070/6,235 requests served (97.4%), mean utilisation 0.401
+22:13:36 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 7,370.3, 6,525/6,769 requests served (96.4%), mean utilisation 0.438
+22:13:37 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 6,266.8, 6,051/6,235 requests served (97.0%), mean utilisation 0.397
+22:13:37 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 13637.1, |V|>0 on 43000/104400 states
+22:13:37 | INFO    | ltf                | training 4. Paper + Gap 2 only (30 episodes over 2 scenario(s)) done in 33.2s
+22:13:37 | INFO    | ltf                | 4. Paper + Gap 2 only: total utility 10,375.2, 4,783/6,493 requests served (73.7%), mean utilisation 0.319
+22:13:37 | INFO    | ltf                | training 5. Paper + all gaps (30 episodes over 2 scenario(s)) ...
+22:13:38 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,821.6, 6,536/6,769 requests served (96.6%), mean utilisation 0.495
+22:13:39 | INFO    | ltf                | 5. Paper + all gaps: total utility 1,766.7, 6,087/6,235 requests served (97.6%), mean utilisation 0.457
+22:13:40 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,833.8, 6,541/6,769 requests served (96.6%), mean utilisation 0.495
+22:13:41 | INFO    | ltf                | 5. Paper + all gaps: total utility 1,687.1, 6,071/6,235 requests served (97.4%), mean utilisation 0.456
+22:13:41 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,812.9, 6,517/6,769 requests served (96.3%), mean utilisation 0.493
+22:13:42 | INFO    | ltf                | 5. Paper + all gaps: total utility 1,995.1, 6,070/6,235 requests served (97.4%), mean utilisation 0.453
+22:13:43 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,091.3, 6,540/6,769 requests served (96.6%), mean utilisation 0.494
+22:13:44 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,097.0, 6,080/6,235 requests served (97.5%), mean utilisation 0.453
+22:13:45 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,445.1, 6,547/6,769 requests served (96.7%), mean utilisation 0.491
+22:13:46 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,519.8, 6,079/6,235 requests served (97.5%), mean utilisation 0.449
+22:13:47 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,508.9, 6,527/6,769 requests served (96.4%), mean utilisation 0.488
+22:13:47 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,298.8, 6,074/6,235 requests served (97.4%), mean utilisation 0.450
+22:13:48 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,648.9, 6,544/6,769 requests served (96.7%), mean utilisation 0.487
+22:13:49 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,569.9, 6,072/6,235 requests served (97.4%), mean utilisation 0.447
+22:13:50 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,023.0, 6,548/6,769 requests served (96.7%), mean utilisation 0.484
+22:13:50 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,841.3, 6,061/6,235 requests served (97.2%), mean utilisation 0.443
+22:13:51 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,245.8, 6,520/6,769 requests served (96.3%), mean utilisation 0.480
+22:13:52 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,110.9, 6,069/6,235 requests served (97.3%), mean utilisation 0.441
+22:13:53 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,308.4, 6,532/6,769 requests served (96.5%), mean utilisation 0.479
+22:13:53 | INFO    | ltf                | 5. Paper + all gaps: total utility 2,937.4, 6,058/6,235 requests served (97.2%), mean utilisation 0.443
+22:13:53 | INFO    | ltf                |   episode 10/30: eps=0.71, train utility 7245.8, |V|>0 on 27275/104400 states
+22:13:54 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,368.3, 6,565/6,769 requests served (97.0%), mean utilisation 0.482
+22:13:55 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,322.6, 6,073/6,235 requests served (97.4%), mean utilisation 0.439
+22:13:56 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,672.0, 6,545/6,769 requests served (96.7%), mean utilisation 0.475
+22:13:56 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,457.5, 6,080/6,235 requests served (97.5%), mean utilisation 0.438
+22:13:57 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,925.2, 6,553/6,769 requests served (96.8%), mean utilisation 0.475
+22:13:58 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,623.0, 6,063/6,235 requests served (97.2%), mean utilisation 0.436
+22:13:59 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,977.7, 6,538/6,769 requests served (96.6%), mean utilisation 0.472
+22:13:59 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,061.8, 6,083/6,235 requests served (97.6%), mean utilisation 0.433
+22:14:00 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,219.4, 6,540/6,769 requests served (96.6%), mean utilisation 0.472
+22:14:01 | INFO    | ltf                | 5. Paper + all gaps: total utility 3,990.2, 6,061/6,235 requests served (97.2%), mean utilisation 0.431
+22:14:02 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,302.2, 6,526/6,769 requests served (96.4%), mean utilisation 0.469
+22:14:02 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,163.5, 6,078/6,235 requests served (97.5%), mean utilisation 0.431
+22:14:03 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,416.8, 6,562/6,769 requests served (96.9%), mean utilisation 0.471
+22:14:04 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,261.5, 6,058/6,235 requests served (97.2%), mean utilisation 0.428
+22:14:05 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,467.4, 6,545/6,769 requests served (96.7%), mean utilisation 0.469
+22:14:05 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,563.5, 6,090/6,235 requests served (97.7%), mean utilisation 0.427
+22:14:06 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,881.3, 6,560/6,769 requests served (96.9%), mean utilisation 0.464
+22:14:07 | INFO    | ltf                | 5. Paper + all gaps: total utility 4,721.8, 6,069/6,235 requests served (97.3%), mean utilisation 0.424
+22:14:08 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,997.5, 6,536/6,769 requests served (96.6%), mean utilisation 0.462
+22:14:09 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,000.0, 6,092/6,235 requests served (97.7%), mean utilisation 0.423
+22:14:09 | INFO    | ltf                |   episode 20/30: eps=0.50, train utility 10997.6, |V|>0 on 34708/104400 states
+22:14:09 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,228.0, 6,558/6,769 requests served (96.9%), mean utilisation 0.461
+22:14:10 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,013.2, 6,082/6,235 requests served (97.5%), mean utilisation 0.421
+22:14:11 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,355.0, 6,544/6,769 requests served (96.7%), mean utilisation 0.459
+22:14:11 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,181.0, 6,091/6,235 requests served (97.7%), mean utilisation 0.420
+22:14:12 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,633.6, 6,532/6,769 requests served (96.5%), mean utilisation 0.457
+22:14:13 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,215.7, 6,067/6,235 requests served (97.3%), mean utilisation 0.418
+22:14:13 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,655.4, 6,553/6,769 requests served (96.8%), mean utilisation 0.456
+22:14:14 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,347.1, 6,092/6,235 requests served (97.7%), mean utilisation 0.418
+22:14:15 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,869.2, 6,565/6,769 requests served (97.0%), mean utilisation 0.456
+22:14:16 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,684.8, 6,085/6,235 requests served (97.6%), mean utilisation 0.415
+22:14:16 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,892.7, 6,532/6,769 requests served (96.5%), mean utilisation 0.453
+22:14:17 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,852.9, 6,079/6,235 requests served (97.5%), mean utilisation 0.412
+22:14:18 | INFO    | ltf                | 5. Paper + all gaps: total utility 7,113.3, 6,554/6,769 requests served (96.8%), mean utilisation 0.452
+22:14:18 | INFO    | ltf                | 5. Paper + all gaps: total utility 5,950.0, 6,076/6,235 requests served (97.4%), mean utilisation 0.412
+22:14:19 | INFO    | ltf                | 5. Paper + all gaps: total utility 7,535.1, 6,566/6,769 requests served (97.0%), mean utilisation 0.449
+22:14:20 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,229.3, 6,088/6,235 requests served (97.6%), mean utilisation 0.410
+22:14:21 | INFO    | ltf                | 5. Paper + all gaps: total utility 7,668.9, 6,565/6,769 requests served (97.0%), mean utilisation 0.447
+22:14:21 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,416.4, 6,089/6,235 requests served (97.7%), mean utilisation 0.407
+22:14:22 | INFO    | ltf                | 5. Paper + all gaps: total utility 7,709.3, 6,539/6,769 requests served (96.6%), mean utilisation 0.444
+22:14:23 | INFO    | ltf                | 5. Paper + all gaps: total utility 6,576.6, 6,073/6,235 requests served (97.4%), mean utilisation 0.404
+22:14:23 | INFO    | ltf                |   episode 30/30: eps=0.28, train utility 14286.0, |V|>0 on 38814/104400 states
+22:14:23 | INFO    | ltf                | training 5. Paper + all gaps (30 episodes over 2 scenario(s)) done in 45.4s
+22:14:24 | INFO    | ltf                | 5. Paper + all gaps: total utility 10,819.4, 4,801/6,493 requests served (73.9%), mean utilisation 0.320
+
+======================================================================================================================
+ONE GAP AT A TIME  (identical fleet and identical request stream in every row)
+======================================================================================================================
+                        method  total_utility  rate_var  rate_var_between  rate_group_ratio  util_var  util_adj_var  n_idle_drivers
+             0. Paper baseline   10508.172181  1.017189          0.487549          1.925555  0.017289      0.257264               0
+        1. Paper + Gap 1a only   11064.702999  1.508862          0.502661          1.876295  0.015829      0.283402               2
+        2. Paper + Gap 1b only   10456.996376  0.193295          0.001087          0.965837  0.009862      0.152390               0
+3. Paper + Gap 1 whole (1a+1b)   11006.559887  0.363951          0.001433          0.962926  0.011494      0.165433               0
+         4. Paper + Gap 2 only   10375.155910  0.682815          0.310250          1.713025  0.006775      0.120676               0
+           5. Paper + all gaps   10819.435450  0.387506          0.001217          0.965107  0.007494      0.122264               2
+
+======================================================================================================================
+EACH GAP'S OWN CONTRIBUTION, measured against the paper baseline
+======================================================================================================================
+
+1. Paper + Gap 1a only
+   total utility                10508.1722 ->   11064.7030   +5.3%
+   Var(hourly rate)                 1.0172 ->       1.5089   +48.3%
+   between-group gap                0.4875 ->       0.5027   +3.1%
+   group ratio (1.0 ideal)          1.9256 ->       1.8763   |1-x| 0.926 -> 0.876
+   Var(utilisation)                 0.0173 ->       0.0158   -8.4%
+   Var(util) adjusted               0.2573 ->       0.2834   +10.2%
+   idle drivers                     0.0000 ->       2.0000   +nan%
+
+2. Paper + Gap 1b only
+   total utility                10508.1722 ->   10456.9964   -0.5%
+   Var(hourly rate)                 1.0172 ->       0.1933   -81.0%
+   between-group gap                0.4875 ->       0.0011   -99.8%
+   group ratio (1.0 ideal)          1.9256 ->       0.9658   |1-x| 0.926 -> 0.034
+   Var(utilisation)                 0.0173 ->       0.0099   -43.0%
+   Var(util) adjusted               0.2573 ->       0.1524   -40.8%
+   idle drivers                     0.0000 ->       0.0000   +nan%
+
+3. Paper + Gap 1 whole (1a+1b)
+   total utility                10508.1722 ->   11006.5599   +4.7%
+   Var(hourly rate)                 1.0172 ->       0.3640   -64.2%
+   between-group gap                0.4875 ->       0.0014   -99.7%
+   group ratio (1.0 ideal)          1.9256 ->       0.9629   |1-x| 0.926 -> 0.037
+   Var(utilisation)                 0.0173 ->       0.0115   -33.5%
+   Var(util) adjusted               0.2573 ->       0.1654   -35.7%
+   idle drivers                     0.0000 ->       0.0000   +nan%
+
+4. Paper + Gap 2 only
+   total utility                10508.1722 ->   10375.1559   -1.3%
+   Var(hourly rate)                 1.0172 ->       0.6828   -32.9%
+   between-group gap                0.4875 ->       0.3102   -36.4%
+   group ratio (1.0 ideal)          1.9256 ->       1.7130   |1-x| 0.926 -> 0.713
+   Var(utilisation)                 0.0173 ->       0.0068   -60.8%
+   Var(util) adjusted               0.2573 ->       0.1207   -53.1%
+   idle drivers                     0.0000 ->       0.0000   +nan%
+
+5. Paper + all gaps
+   total utility                10508.1722 ->   10819.4354   +3.0%
+   Var(hourly rate)                 1.0172 ->       0.3875   -61.9%
+   between-group gap                0.4875 ->       0.0012   -99.8%
+   group ratio (1.0 ideal)          1.9256 ->       0.9651   |1-x| 0.926 -> 0.035
+   Var(utilisation)                 0.0173 ->       0.0075   -56.7%
+   Var(util) adjusted               0.2573 ->       0.1223   -52.5%
+   idle drivers                     0.0000 ->       2.0000   +nan%
+
+wrote outputs/gap_isolation.csv
