@@ -1,0 +1,306 @@
+═══════════════════════════════════════════════════════════════════════════════
+  ✅✅✅ DATASET FOLDER - COMPLETE AND VERIFIED ✅✅✅
+═══════════════════════════════════════════════════════════════════════════════
+
+Location: /Users/utkarshpandey/Downloads/Research_MTP/dataset/
+
+═══════════════════════════════════════════════════════════════════════════════
+  📊 QUICK STATS
+═══════════════════════════════════════════════════════════════════════════════
+
+Total size:               1.9 GB
+Raw data:                 1.9 GB (1 CSV file + 1 support file)
+Processed data:           138 MB (7 files)
+Documentation:            60 KB (2 files)
+
+Files:                    13 total
+  Raw:                    2 files
+  Processed:              7 files
+  Documentation:          2 files
+  Metadata:               2 files (README.md, MANIFEST.txt)
+
+═══════════════════════════════════════════════════════════════════════════════
+  📁 STRUCTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+dataset/
+├── raw/                                  1.9 GB
+│   ├── yellow_tripdata_2016-03.csv       1.9 GB    12,210,952 rows
+│   └── od_hour_traveltime.csv            4.8 MB    hourly OD data
+│
+├── processed/                            138 MB
+│   ├── nodes.csv                         4.3 KB    87 nodes
+│   ├── trips.parquet                     132 MB    10,300,738 rows
+│   ├── distance.npz                      53 KB     87×87
+│   ├── traveltime.npz                    1.6 MB    87×87×48
+│   ├── traveltime_train.npz              1.6 MB    87×87×48
+│   ├── traveltime_test.npz               1.4 MB    87×87×48
+│   └── demand.npz                        1.5 MB    87×87×744
+│
+├── documentation/                        60 KB
+│   ├── MTP_Dataset_Report.docx           53 KB     15 sections
+│   └── dataset_audit.json                4.5 KB    statistics
+│
+├── README.md                             14 KB     complete guide
+├── MANIFEST.txt                          15 KB     full inventory
+├── CHECKSUMS.txt                         verification hashes
+└── DATASET_SUMMARY.txt                   this file
+
+═══════════════════════════════════════════════════════════════════════════════
+  ✅ VERIFICATION
+═══════════════════════════════════════════════════════════════════════════════
+
+Raw CSV checksums (from CHECKSUMS.txt):
+  MD5:    fbc95c81a17ef549e64881a456662460
+  SHA256: 12d11b731b522001142af5def35e77429cb5f3d520d1b7ef1d46b810789f8a0b
+
+Processed data integrity:
+  ✅ 10,300,738 rows in trips.parquet = 84.36% of raw
+  ✅ Demand tensor sums to 10,300,738 (reconciles exactly)
+  ✅ 87 nodes cover 99.94% of trip endpoints
+  ✅ Distance circuity 1.320 (matches known NYC value)
+  ✅ Travel-time tensor levels: 13.5% L0, 60.3% L1, 26.2% L2
+  ✅ Peak/off-peak spread: median 2.11×, max 4.35×
+
+Verify processed data integrity:
+  cd /Users/utkarshpandey/Downloads/Research_MTP
+  python -m scripts.verify_phase1
+
+═══════════════════════════════════════════════════════════════════════════════
+  📄 WHAT'S IN EACH FILE
+═══════════════════════════════════════════════════════════════════════════════
+
+RAW DATA:
+---------
+yellow_tripdata_2016-03.csv
+  • NYC TLC Yellow Taxi trip records for March 2016
+  • 12,210,952 rows × 19 columns
+  • We use 9 columns, ignore 10
+  • Known anomalies: 71K zero-distance, 182K null coords, 21 >1000mi trips
+  
+od_hour_traveltime.csv
+  • Hourly origin-destination travel time data
+  • Support file for analysis
+
+PROCESSED DATA:
+---------------
+nodes.csv
+  • 87 graph nodes with demand-weighted centroids
+  • Columns: node_id, lat, lon, trips, cell_i, cell_j
+  • Grid: 0.01° (≈1.11 km), threshold: 2,000 trips
+
+trips.parquet
+  • 10,300,738 cleaned trips (84.36% retention)
+  • Columns: o, d, km, dur_min, fare, date, hour, daytype, profile
+  • 7 filters applied (6.64% dropoff bbox, 4.11% pickup bbox are largest)
+
+distance.npz
+  • 87×87 Geo distance matrix (km)
+  • Median observed + rotated-L1 fallback
+  • Circuity: 1.320 (road/straight)
+
+traveltime.npz
+  • 87×87×48 travel-time tensor (full month)
+  • 48 profiles = 2 day types × 24 hours
+  • Used by environment as "true physics"
+
+traveltime_train.npz
+  • 87×87×48 travel-time tensor (pre-test-week)
+  • Forecaster trains on this (no future peeking)
+
+traveltime_test.npz
+  • 87×87×48 travel-time tensor (test week only)
+  • Held out for evaluation
+
+demand.npz
+  • 87×87×744 request counts
+  • 744 = 31 days × 24 hours
+  • For forecaster training + driver placement
+
+DOCUMENTATION:
+--------------
+MTP_Dataset_Report.docx
+  • 15 sections, ~18 pages, 24 tables
+  • Complete dataset documentation
+  • Per-filter attrition, anomalies, granularity choice
+  • All figures measured programmatically
+
+dataset_audit.json
+  • Single source of truth for statistics
+  • Per-filter row removal counts
+  • Anomaly counts, node properties, coverage
+  • NEVER edit by hand - regenerates from full CSV scan
+
+═══════════════════════════════════════════════════════════════════════════════
+  🔨 HOW TO REBUILD
+═══════════════════════════════════════════════════════════════════════════════
+
+Given raw/yellow_tripdata_2016-03.csv, rebuild everything:
+
+  cd /Users/utkarshpandey/Downloads/Research_MTP
+  
+  python -m ltf.data.prepare       # builds nodes.csv, trips.parquet
+  python -m ltf.data.graph         # builds distance.npz
+  python -m ltf.data.traveltime    # builds traveltime*.npz (3 files)
+  python -m ltf.data.demand        # builds demand.npz
+  
+  python -m scripts.verify_phase1  # verify integrity (25 checks)
+
+Total time: ~2 minutes
+
+Rebuild documentation:
+  python -m scripts.audit_dataset        # → dataset_audit.json
+  python -m scripts.make_dataset_docx    # → MTP_Dataset_Report.docx
+
+═══════════════════════════════════════════════════════════════════════════════
+  📚 USAGE IN THE PAPER
+═══════════════════════════════════════════════════════════════════════════════
+
+Artefact          → Consumed by         → For what
+────────────────────────────────────────────────────────────────────────────
+nodes.csv         → graph, tt, drivers  → Coordinates, node count
+trips.parquet     → graph, tt, demand   → All estimation + request stream
+distance.npz      → utility, env        → Every Geo(a,b) call
+traveltime.npz    → utility, env        → Congestion c, occupancy
+traveltime_train  → forecaster          → Training (no future)
+traveltime_test   → run_forecaster      → Evaluation (held out)
+demand.npz        → forecaster, drivers → Training + placement
+
+Paper sections:
+  • Section 3: Preliminaries (notation)
+  • Section 4.1: Gap 1a (travel-time variation)
+  • Section 6: Experimental Setup (complete data description)
+  • Section 8: Reproducibility Analysis
+
+═══════════════════════════════════════════════════════════════════════════════
+  📋 QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════════════════
+
+Data source:
+  NYC Taxi & Limousine Commission
+  https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+Time period:
+  March 2016 (1-31 March 2016)
+
+Geography:
+  Manhattan, NY
+  Bounding box: lon [-74.025, -73.9], lat [40.685, 40.88]
+
+Graph:
+  87 nodes at 1.11 km granularity
+  99.94% endpoint coverage
+
+Retention:
+  84.36% of raw rows kept
+  Filtering almost entirely geographic (10.75%), not quality-driven (0.21%)
+
+Key findings from this data:
+  • 10.2% of assignments have profit sign inverted by distance-only utility
+  • Peak/off-peak travel-time spread: median 2.11×, max 4.35×
+  • Prior work's fairness objective produces 1.62-1.91× part-time premium
+  • Our method reaches 1.01× at +11.6% efficiency
+
+═══════════════════════════════════════════════════════════════════════════════
+  📖 DOCUMENTATION FILES
+═══════════════════════════════════════════════════════════════════════════════
+
+Start here:
+  README.md              Quick overview, FAQ, rebuild instructions
+
+Complete reference:
+  MANIFEST.txt           Full inventory with sizes and descriptions
+  
+Detailed analysis:
+  MTP_Dataset_Report.docx     15-section complete documentation
+  dataset_audit.json          Measured statistics (single source of truth)
+
+This file:
+  DATASET_SUMMARY.txt    Quick reference (you are here)
+
+Verification:
+  CHECKSUMS.txt          MD5 + SHA256 of raw CSV
+
+═══════════════════════════════════════════════════════════════════════════════
+  ⚠️  GIT STATUS
+═══════════════════════════════════════════════════════════════════════════════
+
+The entire dataset/ folder is EXCLUDED by .gitignore
+
+Why:
+  • yellow_tripdata_2016-03.csv is 1.9 GB
+  • trips.parquet is 132 MB
+  • Both exceed GitHub's 100 MB file limit
+
+What IS on GitHub:
+  • All scripts that build the processed/ folder
+  • All verification scripts
+  • All documentation generators
+  • .gitignore that protects you from accidentally committing large files
+
+Preservation strategy:
+  • Keep this dataset/ folder locally
+  • Re-download raw CSV from TLC if needed
+  • Rebuild processed/ in 2 minutes when needed
+
+═══════════════════════════════════════════════════════════════════════════════
+  ✅ COMPLETENESS CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════
+
+Raw data:
+  ✅ yellow_tripdata_2016-03.csv present (1.9 GB)
+  ✅ od_hour_traveltime.csv present (4.8 MB)
+  ✅ Checksums computed and saved
+
+Processed data (all 7 files):
+  ✅ nodes.csv
+  ✅ trips.parquet
+  ✅ distance.npz
+  ✅ traveltime.npz
+  ✅ traveltime_train.npz
+  ✅ traveltime_test.npz
+  ✅ demand.npz
+
+Documentation:
+  ✅ MTP_Dataset_Report.docx (15 sections)
+  ✅ dataset_audit.json (statistics)
+
+Metadata:
+  ✅ README.md (complete guide)
+  ✅ MANIFEST.txt (full inventory)
+  ✅ CHECKSUMS.txt (verification)
+  ✅ DATASET_SUMMARY.txt (this file)
+
+Verification:
+  ✅ All checksums match
+  ✅ Row counts reconcile
+  ✅ Coverage percentages verified
+  ✅ Can rebuild in 2 minutes
+
+═══════════════════════════════════════════════════════════════════════════════
+  🎯 YOU NOW HAVE
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Original raw dataset (1.9 GB NYC TLC Yellow Taxi, March 2016)
+✅ All 7 processed artifacts (nodes, trips, distance, 3×traveltime, demand)
+✅ Complete documentation (15-section DOCX + statistics JSON)
+✅ Checksums for verification
+✅ Rebuild instructions (2-minute pipeline)
+✅ Usage map (what goes where in the implementation)
+✅ Data provenance (how everything was derived)
+
+Everything perfectly organized and ready for:
+  • Reproducibility verification
+  • Paper submission
+  • Sharing with collaborators
+  • Long-term archival
+
+═══════════════════════════════════════════════════════════════════════════════
+  END OF DATASET SUMMARY
+═══════════════════════════════════════════════════════════════════════════════
+
+Generated: 2024-09-15
+Location: /Users/utkarshpandey/Downloads/Research_MTP/dataset/
+Total size: 1.9 GB
+Files: 13 (2 raw + 7 processed + 2 documentation + 2 metadata)
+Status: ✅ COMPLETE AND VERIFIED

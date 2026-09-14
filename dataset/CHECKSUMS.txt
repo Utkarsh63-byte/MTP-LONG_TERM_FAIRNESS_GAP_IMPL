@@ -1,0 +1,2 @@
+MD5 (dataset/raw/yellow_tripdata_2016-03.csv) = fbc95c81a17ef549e64881a456662460
+12d11b731b522001142af5def35e77429cb5f3d520d1b7ef1d46b810789f8a0b  dataset/raw/yellow_tripdata_2016-03.csv
