@@ -6,6 +6,7 @@ cache/
 # Data files
 yellow_tripdata_*.csv
 od_hour_traveltime.csv
+od_hour_traveltime.csv
 
 # Python
 __pycache__/
@@ -34,5 +35,9 @@ outputs/paper/*.pdf
 *.log
 
 # Dataset folder - exclude large files
-dataset/raw/*.csv
+dataset/raw/yellow_tripdata_*.csv
 dataset/processed/trips.parquet
+
+# But allow small processed files (force add them)
+!dataset/processed/*.npz
+!dataset/raw/od_hour_traveltime.csv
